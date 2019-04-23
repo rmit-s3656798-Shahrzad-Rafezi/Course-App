@@ -99,3 +99,6 @@ bower.json
 
 # Ignore node_modules
 node_modules/
+
+# Ignore idea file
+.idea
