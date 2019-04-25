@@ -15,7 +15,7 @@
       <div class="col-lg-6 my-auto order-lg-1 showcase-text">
         <h2>View Courses</h2>
         <p class="lead mb-0">Browse and view courses as a guest. To be able to modify any course you must create an account.</p>
-        <a href="course.html" id="link">Take me there &gt;</a>
+        <%= link_to "Take me there >", courses_path, id: "link" %>
       </div>
       <div class="col-lg-6 order-lg-2 text-white showcase-img">
         <span><%= image_tag("bg-showcase-1.jpg", :alt => "rss feed") %></span>

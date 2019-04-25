@@ -1,2 +1,54 @@
-<h1>StaticPages#contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+<section class="showcase">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+      <div class="col" style="padding: 20px;margin: 20px;">
+        <h1 class="main-heading">Have Questions? Contact Us</h1>
+      </div>
+    </div>
+  </div>
+  <section id="contact" style="padding:40px;padding-right:5px;padding-left:4px;">
+    <div class="container">
+      <form action="javascript:void();" method="post" id="contactForm" style="padding:15px;">
+        <div class="form-row" style="margin-left:0px;margin-right:0px;padding:10px;">
+          <div class="col-md-6" style="padding-left:20px;padding-right:20px;">
+            <fieldset></fieldset>
+            <legend><i class="fa fa-info"></i>&nbsp;General inquiries</legend>
+            <p></p>
+            <div class="table-responsive">
+              <table class="table">
+                <tbody>
+                <tr>
+                  <td><i class="fa fa-building fa fa-phone"></i></td>
+                  <td>KvK: 58314687, BTW:&nbsp;NL223674965B01</td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-map-marker"></i></td>
+                  <td>Prins Bernhardweg 27, 7241 DH Lochem</td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-phone"></i></td>
+                  <td>012345678</td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-envelope"></i></td>
+                  <td>info@courseApp.rmit.edu.au</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-12 col-md-6" id="message" style="padding-right:20px;padding-left:20px;">
+            <fieldset>
+              <legend><i class="fa fa-envelope"></i>&nbsp;Contact Now</legend>
+            </fieldset>
+            <div class="form-group has-feedback"><input class="form-control" type="text" name="from_name" required="" placeholder="Voornaam en Achternaam" id="from_name" tabindex="-1"></div>
+            <div class="form-group has-feedback"><input class="form-control" type="email" name="from_email" required="" placeholder="Uw email adres" id="from_email"></div>
+            <div class="form-group"><textarea class="form-control" rows="5" name="Comments" placeholder="Type uw bericht hier.." id="comments"></textarea></div>
+            <div class="form-group"><button class="btn btn-primary active btn-block" type="submit" style="background-color:#303641;">Send <i class="fa fa-chevron-circle-right"></i></button></div>
+            <hr>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</section>
