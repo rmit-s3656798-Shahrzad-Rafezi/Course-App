@@ -1,4 +1,4 @@
-<body>
+
 
 <section class="showcase">
   <div class="container-fluid p-0">
@@ -8,32 +8,29 @@
       </div>
     </div>
   </div>
-
   <div class="container-fluid p-0">
-
     <div class="row no-gutters">
       <div class="col-lg-6 my-auto order-lg-1 showcase-text">
         <h2>View Courses</h2>
-        <p class="lead mb-0">Browse and view courses as a guest. To be able to modify any course you must create an account.</p>
+        <p class="lead mb-0">Browse and view courses as a guest. To be able to modifie any course you must create an account.</p>
         <%= link_to "Take me there >", courses_path, id: "link" %>
       </div>
-      <div class="col-lg-6 order-lg-2 text-white showcase-img">
-        <span><%= image_tag("bg-showcase-1.jpg", :alt => "rss feed") %></span>
+      <div class="col-lg-6 order-lg-2 text-white showcase-img" >
+        <span>
+          <%= image_tag("bg-showcase-1.jpg") %>
+        </span>
       </div>
     </div>
-
     <div class="row no-gutters">
       <div class="col-lg-6 my-auto order-lg-1 showcase-text">
         <h2>Made by Students</h2>
-        <p class="lead mb-0">2019 Semester 1 Rapid Application Development.</p>
-        <a href="#" id="link">Shahryar Faraji</a>
-        <a href="#" id="link">Shahrzad Rafezi</a>
-      </div>
-      <div class="col-lg-6 text-white showcase-img">
-        <span><%= image_tag("bg-showcase-2.jpg", :alt => "rss feed") %></span>
+        <p class="lead mb-0">2019 Semester 1 Rapid Application Development.</p><a href="#" id="link">Shahryar Faraji</a><a href="#" id="link">Shahrzad Rafezi</a></div>
+      <div class="col-lg-6 text-white showcase-img" >
+        <span>
+          <%= image_tag("bg-showcase-2.jpg") %>
+        </span>
       </div>
     </div>
-
     <section class="call-to-action text-white text-center">
       <div class="container">
         <div class="row">
@@ -51,8 +48,5 @@
         </div>
       </div>
     </section>
-
   </div>
 </section>
-
-</body>
