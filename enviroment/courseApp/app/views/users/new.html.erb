@@ -1,2 +1,26 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<section class="showcase">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+      <div class="col" style="padding: 20px;margin: 20px;">
+        <h1 class="main-heading">Sign up for a courseApp Account</h1>
+      </div>
+    </div>
+    <div class="row login-form">
+      <div class="col-md-4 offset-md-4">
+        <%= form_for(@user, url: signup_path, :html => {:class => "custom-form"}) do |f| %>
+          <%= render 'shared/error_messages' %>
+        <div class="form-group">
+          <%= f.text_field :name, type: "name", placeholder: "Name", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.email_field :email, type: "email", placeholder: "Email", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.password_field :password, type: "password", placeholder: "Password", class: "form-control" %>
+        </div>
+          <%= f.submit "Sign up", class: "btn btn-light btn-block submit-button", type: "button" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
