@@ -7,7 +7,4 @@ class StaticPagesController < ApplicationController
 
   def courses
   end
-
-  def help
-  end
 end

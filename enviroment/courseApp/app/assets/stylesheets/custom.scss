@@ -1,17 +1,341 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "bootstrap.min.css";
 
-#error_explanation {
-  color: red;
-  ul {
-    color: red;
-    margin: 0 0 30px 0;
-  }
+* {
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	color: #406286 !important;
+	font-family: Raleway,sans-serif;
 }
-
-.field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: $state-danger-text;
-  }
+.login-card {
+	max-width: 350px;
+	padding: 40px;
+	margin: 0 auto;
+	.profile-img-card {
+		width: 96px;
+		height: 96px;
+		margin: 0 auto 10px;
+		display: block;
+		border-radius: 50%;
+	}
+	.profile-name-card {
+		font-size: 16px;
+		font-weight: 700;
+		text-align: center;
+		margin: 10px 0 0;
+		min-height: 1em;
+	}
+}
+.panel-green {
+	border-color: #5cb85c;
+	>.panel-heading {
+		border-color: #5cb85c;
+		color: #fff;
+		background-color: #5cb85c;
+	}
+	>a {
+		color: #5cb85c;
+		&:hover {
+			color: #3d8b3d;
+		}
+	}
+}
+.panel-red {
+	border-color: #d9534f;
+	>.panel-heading {
+		border-color: #d9534f;
+		color: #fff;
+		background-color: #d9534f;
+	}
+	>a {
+		color: #d9534f;
+		&:hover {
+			color: #b52b27;
+		}
+	}
+}
+.panel-yellow {
+	border-color: #f0ad4e;
+	>.panel-heading {
+		border-color: #f0ad4e;
+		color: #fff;
+		background-color: #f0ad4e;
+	}
+	>a {
+		color: #f0ad4e;
+		&:hover {
+			color: #df8a13;
+		}
+	}
+}
+.border-pretty {
+	border: 1px solid #000;
+}
+#link {
+	padding-right: 20px;
+}
+.call-to-action {
+	position: relative;
+	background-color: #fff;
+	background-size: cover;
+	padding-top: 7rem;
+	padding-bottom: 7rem;
+}
+.mb-4 {
+	margin-bottom: 1.5rem !important;
+	color: #000;
+}
+.my-4 {
+	margin-bottom: 1.5rem !important;
+	color: #000;
+}
+.navigation-clean-button {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #000;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+	margin: 10px;
+	.navbar-brand {
+		font-weight: 700;
+		color: inherit;
+		&:hover {
+			color: #1485ee;
+		}
+		img {
+			height: 100%;
+			display: inline-block;
+			margin-right: 10px;
+			width: auto;
+		}
+	}
+	.navbar-toggle {
+		border-color: #ddd;
+		&:focus {
+			background: 0 0;
+		}
+		&:hover {
+			background: 0 0;
+		}
+		.icon-bar {
+			background-color: #888;
+		}
+	}
+	.navbar-collapse {
+		border-top-color: #ddd;
+	}
+	.navbar-form {
+		border-top-color: #ddd;
+	}
+	.navbar-nav {
+		>.active {
+			>a {
+				background: 0 0;
+				box-shadow: none;
+			}
+		}
+		>.open {
+			>a {
+				background: 0 0;
+				box-shadow: none;
+			}
+		}
+		>li {
+			>.dropdown-menu {
+				margin-top: -5px;
+				box-shadow: 0 4px 8px rgba(0,0,0,.1);
+				background-color: #fff;
+				border-radius: 2px;
+			}
+		}
+	}
+	.dropdown-menu {
+		>li {
+			>a {
+				line-height: 2;
+				font-size: 14px;
+				font-weight: 300;
+				font-family: Roboto;
+				color: #df4c40;
+				&:focus {
+					line-height: 2;
+					font-size: 14px;
+					font-weight: 300;
+					font-family: Roboto;
+					color: #df4c40;
+					background: #df4c40;
+					color: inherit;
+					transition: background-color .25s;
+					transition-timing-function: ease;
+					transition-timing-function: cubic-bezier(.25,.1,.25,1);
+				}
+				&:hover {
+					background: #df4c40;
+					color: inherit;
+					transition: background-color .25s;
+					transition-timing-function: ease;
+					transition-timing-function: cubic-bezier(.25,.1,.25,1);
+				}
+			}
+		}
+	}
+	.actions {
+		margin-top: 7px;
+		margin-bottom: 0;
+		.login {
+			margin-right: 7px;
+			text-decoration: none;
+			color: #000;
+		}
+	}
+	.action-button {
+		background: 0 0;
+		border-radius: 0;
+		color: #000;
+		box-shadow: none;
+		border: 1px solid #000;
+		text-shadow: none;
+		padding: 10px 22px;
+		transition: background-color .25s;
+		&:active {
+			background: 0 0;
+			border-radius: 0;
+			color: #000;
+			box-shadow: none;
+			border: 1px solid #000;
+			text-shadow: none;
+			padding: 10px 22px;
+			transition: background-color .25s;
+		}
+		&:hover {
+			background: #e04c40;
+			color: #fff;
+			font-weight: 400;
+			border: 1px solid #df4c40;
+		}
+	}
+}
+.navigation-clean-button.navbar-default {
+	.navbar-nav {
+		>.active {
+			>a {
+				color: #e04c40;
+				border-top: 1px solid #e04c40;
+				box-shadow: none;
+				transition: background-color .25s;
+				background: 0 0;
+				pointer-events: none;
+				&:focus {
+					color: #e04c40;
+					border-top: 1px solid #e04c40;
+					box-shadow: none;
+					transition: background-color .25s;
+					background: 0 0;
+					pointer-events: none;
+				}
+				&:hover {
+					color: #e04c40;
+					border-top: 1px solid #e04c40;
+					box-shadow: none;
+					transition: background-color .25s;
+					background: 0 0;
+					pointer-events: none;
+				}
+			}
+		}
+		>li {
+			>a {
+				color: #dfe8ee;
+				font-weight: 400;
+				text-transform: uppercase;
+				font-family: 'Work Sans';
+				&:focus {
+					color: #e04c40 !important;
+					border-top: solid 1px #e04c40;
+					background-color: transparent;
+					transition: background .2s ease,padding .8s linear;
+					transition: background-color .25s;
+				}
+				&:hover {
+					color: #e04c40 !important;
+					border-top: solid 1px #e04c40;
+					background-color: transparent;
+					transition: background .2s ease,padding .8s linear;
+					transition: background-color .25s;
+				}
+			}
+		}
+	}
+}
+.navigation-clean-button.navbar {
+	.navbar-nav {
+		>li {
+			>a {
+				padding-left: 18px;
+				padding-right: 18px;
+			}
+		}
+	}
+}
+.navbar {
+	margin-bottom: 0;
+}
+.btn {
+	border-radius: 0;
+	font-family: Roboto;
+	font-weight: 400;
+	&:focus {
+		color: #fff;
+		text-decoration: none;
+		background-color: #1485ee;
+		border: none;
+	}
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+		background-color: #1485ee;
+		border: none;
+	}
+}
+a.navbar-brand.navbar-link {
+	font-weight: 400;
+}
+p.navbar-text.navbar-right.actions {
+	font-family: 'Roboto Slab';
+	text-transform: uppercase;
+	font-weight: 400;
+}
+a.navbar-link.login {
+	&:hover {
+		color: #e04c40;
+	}
+}
+.btn.focus {
+	color: #fff;
+	text-decoration: none;
+	background-color: #1485ee;
+	border: none;
+}
+.btn-default {
+	color: #fff;
+	background-color: #df4c40;
+	border: none;
+}
+.main-heading {
+	text-align: center;
+}
+@media (max-width:767px) {
+	.navigation-clean-button {
+		padding-top: 0;
+		padding-bottom: 0;
+		.navbar-header {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.navbar-right {
+			margin-bottom: 20px;
+		}
+	}
 }
