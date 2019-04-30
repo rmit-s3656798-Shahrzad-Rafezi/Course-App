@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="84bb1e7e-76ee-4f1e-870e-4922583101cb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/courseApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/courseApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courseApp/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/courseApp/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courseApp/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/courseApp/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courseApp/test/controllers/static_pages_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/courseApp/test/controllers/static_pages_controller_test.rb" afterDir="false" />
-    </list>
+    <list default="true" id="84bb1e7e-76ee-4f1e-870e-4922583101cb" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +9,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/enviroment@test_email_addresses_should_be_be_saved_as_lower_case__courseApp.rcov" NAME="test_email_addresses_should_be_be_saved_as_lower-case: courseApp Coverage Results" MODIFIED="1556596475487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/courseApp" MODULE_NAME="courseApp" />
     <SUITE FILE_PATH="coverage/enviroment@test_should_get_home__courseApp.rcov" NAME="test_should_get_home: courseApp Coverage Results" MODIFIED="1556594542920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/courseApp" MODULE_NAME="courseApp" />
     <SUITE FILE_PATH="coverage/enviroment@test_invalid_signup_information__courseApp.rcov" NAME="test_invalid_signup_information: courseApp Coverage Results" MODIFIED="1556596002178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/courseApp" MODULE_NAME="courseApp" />
     <SUITE FILE_PATH="coverage/enviroment@test_should_get_courses__courseApp.rcov" NAME="test_should_get_courses: courseApp Coverage Results" MODIFIED="1556594358901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/courseApp" MODULE_NAME="courseApp" />
@@ -56,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/courseApp/test/models/user_test.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="735">
               <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
             </state>
           </provider>
@@ -79,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/courseApp/test/controllers/static_pages_controller_test.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+            <state relative-caret-position="75">
+              <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -142,8 +137,8 @@
         <option value="$PROJECT_DIR$/courseApp/config/routes.rb" />
         <option value="$PROJECT_DIR$/courseApp/test/integration/users_signup_test.rb" />
         <option value="$PROJECT_DIR$/courseApp/test/integration/site_layout_test.rb" />
-        <option value="$PROJECT_DIR$/courseApp/test/controllers/static_pages_controller_test.rb" />
         <option value="$PROJECT_DIR$/courseApp/test/models/user_test.rb" />
+        <option value="$PROJECT_DIR$/courseApp/test/controllers/static_pages_controller_test.rb" />
       </list>
     </option>
   </component>
@@ -257,7 +252,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Test::Unit/Shoulda/Minitest.test_email_validation_should_accept_valid_addresses: courseApp">
+  <component name="RunManager" selected="Test::Unit/Shoulda/Minitest.test_email_addresses_should_be_be_saved_as_lower-case: courseApp">
     <configuration name="Development: courseApp" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="courseApp" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
@@ -351,6 +346,36 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_email_addresses_should_be_be_saved_as_lower-case: courseApp" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
+      <module name="courseApp" />
+      <predefined_log_file enabled="true" id="RUBY_TESTUNIT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-Itest" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/../../courseApp" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/../../courseApp/test/models/user_test.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="test_email_addresses_should_be_be_saved_as_lower-case" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_METHOD" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method v="2" />
     </configuration>
     <configuration name="test_email_validation_should_accept_valid_addresses: courseApp" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
@@ -473,43 +498,13 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_should_get_home: courseApp" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
-      <module name="courseApp" />
-      <predefined_log_file enabled="true" id="RUBY_TESTUNIT" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-Itest" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/../../courseApp" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/../../courseApp/test/controllers/static_pages_controller_test.rb" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="test_should_get_home" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_METHOD" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Test::Unit/Shoulda/Minitest.test_email_addresses_should_be_be_saved_as_lower-case: courseApp" />
         <item itemvalue="Test::Unit/Shoulda/Minitest.test_email_validation_should_accept_valid_addresses: courseApp" />
         <item itemvalue="Test::Unit/Shoulda/Minitest.test_should_be_valid: courseApp" />
         <item itemvalue="Test::Unit/Shoulda/Minitest.test_invalid_signup_information: courseApp" />
         <item itemvalue="Test::Unit/Shoulda/Minitest.test_layout_links: courseApp" />
-        <item itemvalue="Test::Unit/Shoulda/Minitest.test_should_get_home: courseApp" />
       </list>
     </recent_temporary>
   </component>
@@ -552,14 +547,11 @@
       <workItem from="1556518591146" duration="195000" />
       <workItem from="1556584633965" duration="651000" />
       <workItem from="1556585443119" duration="6100000" />
-      <workItem from="1556595979271" duration="490000" />
+      <workItem from="1556595979271" duration="1186000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test_should_be_valid__courseApp - 2019.04.30 at 12h 01m 16s.xml">
-      <configuration name="test_should_be_valid: courseApp" configurationId="TestUnitRunConfigurationType" />
-    </history-entry>
     <history-entry file="test_should_get_courses__courseApp - 2019.04.30 at 13h 19m 20s.xml">
       <configuration name="test_should_get_courses: courseApp" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
@@ -587,9 +579,12 @@
     <history-entry file="test_email_validation_should_accept_valid_addresses__courseApp - 2019.04.30 at 13h 50m 07s.xml">
       <configuration name="test_email_validation_should_accept_valid_addresses: courseApp" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="test_email_addresses_should_be_be_saved_as_lower-case__courseApp - 2019.04.30 at 13h 54m 36s.xml">
+      <configuration name="test_email_addresses_should_be_be_saved_as_lower-case: courseApp" configurationId="TestUnitRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42468000" />
+    <option name="totallyTimeSpent" value="43164000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="808" extended-state="6" />
@@ -824,13 +819,6 @@
     <entry file="file://$PROJECT_DIR$/courseApp/test/controllers/users_controller_test.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/courseApp/test/controllers/static_pages_controller_test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/courseApp/test/integration/site_layout_test.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -850,8 +838,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/courseApp/test/models/user_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="735">
           <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/courseApp/test/controllers/static_pages_controller_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
         </state>
       </provider>
     </entry>
