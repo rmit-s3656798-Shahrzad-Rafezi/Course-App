@@ -1,24 +1,27 @@
 require 'test_helper'
 
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
+
+  def setup
+    @base_title = "Rapid Application Development Assignment"
+  end
+
   test "should get home" do
-    get static_pages_home_url
+    get root_path
     assert_response :success
+    assert_select "title", "courseApp | #{@base_title}"
+  end
+
+  test "should get course" do
+    get courses_path
+    assert_response :success
+    assert_select "title", "Course | #{@base_title}"
   end
 
   test "should get contact" do
-    get static_pages_contact_url
+    get contact_path
     assert_response :success
-  end
-
-  test "should get courses" do
-    get static_pages_courses_url
-    assert_response :success
-  end
-
-  test "should get help" do
-    get static_pages_help_url
-    assert_response :success
+    assert_select "title", "Contact | #{@base_title}"
   end
 
 end
