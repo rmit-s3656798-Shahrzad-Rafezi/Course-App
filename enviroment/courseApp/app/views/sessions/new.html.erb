@@ -8,11 +8,16 @@
         </div>
     </div>
     <div class="row login-form">
-        <div class="col-md-4 offset-md-4">
-            <form class="custom-form"> 
-                <div class="form-group"><input class="form-control" type="email" placeholder="Email"></div>
-                <div class="form-group"><input class="form-control" type="password" placeholder="Password"></div><button class="btn btn-light btn-block submit-button" type="button">Login</button></form>
-        </div>
+      <div class="col-md-4 offset-md-4">
+        <%= form_for(:session, url: login_path) do |f| %>
+
+        <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
+
+        <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
+
+        <%= f.submit "Log in", class: "btn btn-primary" %>
+        <% end %>
+
+        <p>New user? <%= link_to "Sign up now!", signup_path %></p>
     </div>
 </div>
-</section>

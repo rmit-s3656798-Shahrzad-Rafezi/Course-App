@@ -13,21 +13,38 @@
         <li class="nav-item dropdown" style="color: rgb(255,255,255);">
           <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">Category </a>
           <div role="menu" class="dropdown-menu">
-            <a role="presentation" href="services.html" class="dropdown-item">Web Programing</a>
+            <a role="presentation" href="#" class="dropdown-item">Web Programing</a>
             <a role="presentation" href="#" class="dropdown-item">Java</a>
             <a role="presentation" href="#" class="dropdown-item">Full Stack Dev</a>
-            <a role="presentation" href="services.html" class="dropdown-item">iOS Engneering</a>
+            <a role="presentation" href="#" class="dropdown-item">iOS Engneering</a>
           </div>
         </li>
         <li class="nav-item dropdown">
           <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link" style="background-color: #ffffff;">Location </a>
           <div role="menu" class="dropdown-menu">
-            <a role="presentation" href="services.html" class="dropdown-item">14.10.31</a>
+            <a role="presentation" href="#" class="dropdown-item">14.10.31</a>
             <a role="presentation" href="#" class="dropdown-item">14.08.26</a>
             <a role="presentation" href="#" class="dropdown-item">14.10.30</a>
           </div>
         </li>
       </ul>
+       <% if logged_in? %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Account <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Profile", current_user %></li>
+              <li><%= link_to "Settings", '#' %></li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to "Log out", logout_path, method: :delete %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to "Log in", login_path %></li>
+        <% end %>
       <p class="ml-auto navbar-text actions">
         <%= link_to "Log in", login_path, class:"login"%>
         <%= link_to "Sign Up", signup_path, class:"btn btn-light action-button", role: "button"%>
