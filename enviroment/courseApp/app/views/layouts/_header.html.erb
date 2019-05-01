@@ -32,8 +32,17 @@
                 </li>
             </ul>
             <% if logged_in? %>
-            <p class="ml-auto navbar-text actions">
-              <%= link_to "Log out", logout_path, method: :delete, class:"btn btn-light action-button", role: "button" %>
+            <ul class="nav navbar-nav nav-left">
+            <li class="nav-item dropdown" style="color: rgb(255,255,255);">
+              <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">
+                Account
+              </a>
+                <div role="menu" class="dropdown-menu">
+                  <%= link_to "Profile", "#", class:"dropdown-item"%>
+                  <%= link_to "Settings", "#", class:"dropdown-item"%>
+                  <%= link_to "Log out", logout_path, method: :delete, class:"dropdown-item"%>
+                </div>
+            </li>
             <% else %>
             <p class="ml-auto navbar-text actions">
               <%= link_to "Login", login_path, class:"login"%>
