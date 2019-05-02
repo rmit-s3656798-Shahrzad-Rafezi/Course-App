@@ -1,0 +1,42 @@
+<% provide(:title, 'Rapid Application Development Assignment') %>
+
+<section class="showcase">
+<div class="container-fluid p-0">
+    <div class="row no-gutters">
+        <div class="col" style="padding: 20px;margin: 20px;">
+            <h1 class="main-heading">Hello from courseApp</h1>
+        </div>
+    </div>
+</div>
+<div class="container-fluid p-0">
+    <div class="row no-gutters">
+        <div class="col-lg-6 my-auto order-lg-1 showcase-text">
+            <h2>View Courses</h2>
+            <p class="lead mb-0">Browse and view courses as a guest. To be able to modifie any course you must create an account.</p><%= link_to "Take me there >", courses_path, id: "link" %></div>
+        <div class="col-lg-6 order-lg-2 text-white showcase-img"><%= image_tag("bg-showcase-2.jpg") %></span></div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col-lg-6 my-auto order-lg-1 showcase-text">
+            <h2>Made by Students</h2>
+            <p class="lead mb-0">2019 Semester 1 Rapid Application Development.</p><a href="#" id="link">Shahryar Faraji</a><a href="#" id="link">Shahrzad Rafezi</a></div>
+        <div class="col-lg-6 text-white showcase-img"><span></span></div>
+    </div>
+    <section class="call-to-action text-white text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <h2 class="mb-4">Ready to get started? Sign up now!</h2>
+                </div>
+                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                    <form>
+                        <div class="form-row">
+                            <div class="col-12 col-md-9 mb-2 mb-md-0"><input class="form-control form-control-lg" type="email" placeholder="Enter your email..." disabled></div>
+                            <div class="col-12 col-md-3"><button class="btn btn-primary btn-block btn-lg" type="button" disabled>Sign up!</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</section>

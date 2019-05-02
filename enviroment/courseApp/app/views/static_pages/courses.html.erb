@@ -1,0 +1,99 @@
+<% provide(:title, 'Course') %>
+<section class="showcase">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+      <div class="col" style="padding: 20px;margin: 20px;">
+        <h1 class="main-heading">All Courses</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<div>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" role="tab" data-toggle="tab" href="#tab-1">Courses</a></li>
+    <li class="nav-item">
+      <a class="nav-link" role="tab" data-toggle="tab" href="#tab-2">Coordinators</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane active" role="tabpanel" id="tab-1">
+      <section style="padding-top: 20px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card mb-4 box-shadow">
+                <%= image_tag("minibus.jpeg", class: "card-img-top w-100 d-block") %>
+                <div class="card-body">
+                  <h4 class="card-title">Java Programming</h4>
+                  <h6 class="text-muted card-subtitle mb-2">Coordinator.</h6>
+                  <h6 class="text-muted card-subtitle mb-2">Prerequisite.</h6>
+                  <h6 class="text-muted card-subtitle mb-2">Category.</h6>
+                  <h6 class="text-muted card-subtitle mb-2">Location.</h6>
+                  <h6 class="text-muted card-subtitle mb-2">Created.</h6>
+                  <a class="card-link" href="#">Link</a>
+                  <a class="card-link" href="#">Link</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="card mb-4 box-shadow">
+                <%= image_tag("minibus.jpeg", class: "card-img-top w-100 d-block") %>
+                <div class="card-body">
+                  <h4 class="card-title">Advanced Programming</h4>
+                  <h6 class="text-muted card-subtitle mb-2">Coordinator.</h6>
+                  <h6 class="text-muted card-subtitle mb-2">Prerequisite.</h6>
+                  <h6 class="text-muted card-subtitle mb-2">Category.</h6>
+                  <h6 class="text-muted card-subtitle mb-2">Location.</h6>
+                  <h6 class="text-muted card-subtitle mb-2">Created.</h6>
+                  <a class="card-link" href="#">Link</a>
+                  <a class="card-link" href="#">Link</a></div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="card mb-4 box-shadow">
+                <%= image_tag("minibus.jpeg", class: "card-img-top w-100 d-block") %>
+                <div class="card-body">
+                  <h4 class="card-title">Advanced iOS/OSX</h4>
+                  <h6 class="text-muted card-subtitle mb-2">Coordinator.</h6>
+                  <h6 class="text-muted card-subtitle mb-2">Prerequisite.</h6>
+                  <h6 class="text-muted card-subtitle mb-2">Category.</h6>
+                  <h6 class="text-muted card-subtitle mb-2">Location.</h6>
+                  <h6 class="text-muted card-subtitle mb-2">Created.</h6>
+                  <a class="card-link" href="#">Link</a>
+                  <a class="card-link" href="#">Link</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="tab-pane" role="tabpanel" id="tab-2">
+      <div class="row">
+        <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+          <div class="login-card">
+            <%= image_tag("avatar-dhg.png", class: "profile-img-card") %>
+            <p class="profile-name-card">Andy Song</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+          <div class="login-card">
+            <%= image_tag("avatar-dhg.png", class: "profile-img-card") %>
+            <p class="profile-name-card">Alex Jiang</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+          <div class="login-card">
+            <%= image_tag("avatar-dhg.png", class: "profile-img-card") %>
+            <p class="profile-name-card">Ali Yavari</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
