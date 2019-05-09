@@ -7,8 +7,10 @@ class User < ApplicationRecord
             format: { with: VALID_EMAIL_REGEX, message: "registration only open for RMIT staff" },
             uniqueness: { case_sensitive: false }
   has_secure_password
-  validates :password, format: {with: /\A^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$\z/,
-                                  message: "must contains at least lowercase letter, an uppercase, a digit, a special character and 8+ characters."}
+  VALID_PASSWORD_REGEX = /\A^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$\z/
+  validates :password, format: { with: VALID_PASSWORD_REGEX,
+                                 message: "must contains at least lowercase letter, 
+                                           an uppercase, a digit, a special character and 8+ characters."}
 
   # Returns the hash digest of the given string.
   def User.digest(string)
