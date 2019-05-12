@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="84bb1e7e-76ee-4f1e-870e-4922583101cb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courseApp/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/courseApp/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courseApp/test/fixtures/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/courseApp/test/fixtures/users.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courseApp/test/integration/users_login_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/courseApp/test/integration/users_login_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courseApp/test/integration/users_signup_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/courseApp/test/integration/users_signup_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courseApp/test/models/user_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/courseApp/test/models/user_test.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,44 +16,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/enviroment@test_email_addresses_should_be_be_saved_as_lower_case__courseApp.rcov" NAME="test_email_addresses_should_be_be_saved_as_lower-case: courseApp Coverage Results" MODIFIED="1556596475487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/courseApp" MODULE_NAME="courseApp" />
+    <SUITE FILE_PATH="coverage/enviroment@test_email_addresses_should_be_be_saved_as_lower_case__courseApp.rcov" NAME="test_email_addresses_should_be_be_saved_as_lower-case: courseApp Coverage Results" MODIFIED="1557620608983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/courseApp" MODULE_NAME="courseApp" />
     <SUITE FILE_PATH="coverage/enviroment@test_should_get_home__courseApp.rcov" NAME="test_should_get_home: courseApp Coverage Results" MODIFIED="1556594542920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/courseApp" MODULE_NAME="courseApp" />
     <SUITE FILE_PATH="coverage/enviroment@test_invalid_signup_information__courseApp.rcov" NAME="test_invalid_signup_information: courseApp Coverage Results" MODIFIED="1556596002178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/courseApp" MODULE_NAME="courseApp" />
     <SUITE FILE_PATH="coverage/enviroment@test_should_get_courses__courseApp.rcov" NAME="test_should_get_courses: courseApp Coverage Results" MODIFIED="1556594358901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/courseApp" MODULE_NAME="courseApp" />
     <SUITE FILE_PATH="coverage/enviroment@test_email_validation_should_accept_valid_addresses__courseApp.rcov" NAME="test_email_validation_should_accept_valid_addresses: courseApp Coverage Results" MODIFIED="1556596206115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/courseApp" MODULE_NAME="courseApp" />
     <SUITE FILE_PATH="coverage/enviroment@test_layout_links__courseApp.rcov" NAME="test_layout_links: courseApp Coverage Results" MODIFIED="1556595079793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/courseApp" MODULE_NAME="courseApp" />
     <SUITE FILE_PATH="coverage/enviroment@test_should_be_valid__courseApp.rcov" NAME="test_should_be_valid: courseApp Coverage Results" MODIFIED="1556596193683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/courseApp" MODULE_NAME="courseApp" />
+    <SUITE FILE_PATH="coverage/enviroment@test_email_validation_should_be_accept_valid_addresses__courseApp.rcov" NAME="test_email_validation_should_be_accept_valid_addresses: courseApp Coverage Results" MODIFIED="1557620639721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/courseApp" MODULE_NAME="courseApp" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/courseApp/app/assets/stylesheets/custom.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="416" selection-start-line="416" selection-end-line="416" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/courseApp/test/integration/users_login_test.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/courseApp/test/models/user_test.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="57" column="2" selection-start-line="57" selection-start-column="2" selection-end-line="57" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -89,18 +67,21 @@
         <option value="$PROJECT_DIR$/courseApp/Gemfile" />
         <option value="$PROJECT_DIR$/courseApp/config/routes.rb" />
         <option value="$PROJECT_DIR$/courseApp/test/controllers/static_pages_controller_test.rb" />
-        <option value="$PROJECT_DIR$/courseApp/test/integration/users_signup_test.rb" />
         <option value="$PROJECT_DIR$/courseApp/test/integration/site_layout_test.rb" />
         <option value="$PROJECT_DIR$/courseApp/app/assets/javascripts/bootstrap.min.js" />
         <option value="$PROJECT_DIR$/courseApp/app/views/static_pages/home.html.erb" />
         <option value="$PROJECT_DIR$/courseApp/app/views/static_pages/courses.html.erb" />
         <option value="$PROJECT_DIR$/courseApp/app/views/shared/_error_messages.html.erb" />
-        <option value="$PROJECT_DIR$/courseApp/app/models/user.rb" />
         <option value="$PROJECT_DIR$/courseApp/app/assets/stylesheets/custom.scss" />
         <option value="$PROJECT_DIR$/courseApp/app/helpers/application_helper.rb" />
-        <option value="$PROJECT_DIR$/courseApp/app/views/layouts/_header.html.erb" />
         <option value="$PROJECT_DIR$/courseApp/app/views/sessions/new.html.erb" />
+        <option value="$PROJECT_DIR$/courseApp/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/courseApp/test/integration/users_signup_test.rb" />
         <option value="$PROJECT_DIR$/courseApp/test/models/user_test.rb" />
+        <option value="$PROJECT_DIR$/courseApp/test/fixtures/users.yml" />
+        <option value="$PROJECT_DIR$/courseApp/test/integration/users_login_test.rb" />
+        <option value="$PROJECT_DIR$/courseApp/app/views/users/show.html.erb" />
+        <option value="$PROJECT_DIR$/courseApp/app/views/layouts/_header.html.erb" />
       </list>
     </option>
   </component>
@@ -114,7 +95,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="805" />
+    <option name="height" value="808" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -122,6 +103,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -145,14 +128,28 @@
               <item name="enviroment" type="462c0819:PsiDirectoryNode" />
               <item name="courseApp" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="enviroment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="enviroment" type="462c0819:PsiDirectoryNode" />
+              <item name="courseApp" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="enviroment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="enviroment" type="462c0819:PsiDirectoryNode" />
+              <item name="courseApp" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -180,7 +177,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Test::Unit/Shoulda/Minitest.test_email_addresses_should_be_be_saved_as_lower-case: courseApp">
+  <component name="RunManager" selected="Test::Unit/Shoulda/Minitest.test_email_validation_should_be_accept_valid_addresses: courseApp">
     <configuration name="Development: courseApp" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="courseApp" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
@@ -336,6 +333,36 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method v="2" />
     </configuration>
+    <configuration name="test_email_validation_should_be_accept_valid_addresses: courseApp" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
+      <module name="courseApp" />
+      <predefined_log_file enabled="true" id="RUBY_TESTUNIT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-Itest" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/../../courseApp" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/../../courseApp/test/models/user_test.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="test_email_validation_should_be_accept_valid_addresses" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_METHOD" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test_invalid_signup_information: courseApp" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
       <module name="courseApp" />
       <predefined_log_file enabled="true" id="RUBY_TESTUNIT" />
@@ -359,36 +386,6 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/../../courseApp/test/integration/users_signup_test.rb" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="test_invalid_signup_information" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_METHOD" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test_layout_links: courseApp" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
-      <module name="courseApp" />
-      <predefined_log_file enabled="true" id="RUBY_TESTUNIT" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-Itest" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/../../courseApp" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/../../courseApp/test/integration/site_layout_test.rb" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="test_layout_links" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_METHOD" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
@@ -428,11 +425,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Test::Unit/Shoulda/Minitest.test_email_validation_should_be_accept_valid_addresses: courseApp" />
         <item itemvalue="Test::Unit/Shoulda/Minitest.test_email_addresses_should_be_be_saved_as_lower-case: courseApp" />
         <item itemvalue="Test::Unit/Shoulda/Minitest.test_email_validation_should_accept_valid_addresses: courseApp" />
         <item itemvalue="Test::Unit/Shoulda/Minitest.test_should_be_valid: courseApp" />
         <item itemvalue="Test::Unit/Shoulda/Minitest.test_invalid_signup_information: courseApp" />
-        <item itemvalue="Test::Unit/Shoulda/Minitest.test_layout_links: courseApp" />
       </list>
     </recent_temporary>
   </component>
@@ -484,14 +481,16 @@
       <workItem from="1557267856990" duration="222000" />
       <workItem from="1557361130126" duration="297000" />
       <workItem from="1557371742891" duration="299000" />
-      <workItem from="1557378489141" duration="96000" />
+      <workItem from="1557378489141" duration="1138000" />
+      <workItem from="1557459210824" duration="3000" />
+      <workItem from="1557616271343" duration="1245000" />
+      <workItem from="1557618641002" duration="3344000" />
+      <workItem from="1557622247200" duration="205000" />
+      <workItem from="1557622471217" duration="285000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test_should_get_courses__courseApp - 2019.04.30 at 13h 19m 20s.xml">
-      <configuration name="test_should_get_courses: courseApp" configurationId="TestUnitRunConfigurationType" />
-    </history-entry>
     <history-entry file="test_should_get_home__courseApp - 2019.04.30 at 13h 20m 36s.xml">
       <configuration name="test_should_get_home: courseApp" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
@@ -519,28 +518,30 @@
     <history-entry file="test_email_addresses_should_be_be_saved_as_lower-case__courseApp - 2019.04.30 at 13h 54m 36s.xml">
       <configuration name="test_email_addresses_should_be_be_saved_as_lower-case: courseApp" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="test_email_validation_should_be_accept_valid_addresses__courseApp - 2019.05.12 at 10h 24m 01s.xml">
+      <configuration name="test_email_validation_should_be_accept_valid_addresses: courseApp" configurationId="TestUnitRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53194000" />
+    <option name="totallyTimeSpent" value="59318000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="805" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="808" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17167382" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18240343" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32913166" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32913166" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3282123" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39944133" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.5539972" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.34776536" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -552,49 +553,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-4.1.3/lib/bootstrap/version.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/courseApp/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/courseApp/db/migrate/20190428001413_add_index_to_users_email.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/courseApp/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/courseApp/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="57" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/courseApp/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-206" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/courseApp/db/migrate/20190424082819_create_users.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="46" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/courseApp/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -606,13 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/courseApp/test/integration/users_signup_test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="88" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
         </state>
       </provider>
     </entry>
@@ -739,13 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/courseApp/app/views/layouts/_header.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="6" lean-forward="true" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/courseApp/app/views/layouts/mailer.html.erb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -769,13 +713,6 @@
     <entry file="file://$PROJECT_DIR$/courseApp/app/views/layouts/_shim.html.erb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/courseApp/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/courseApp/app/assets/images/minibus.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -798,17 +735,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/courseApp/test/integration/users_login_test.rb">
+    <entry file="file://$USER_HOME$/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/minitest-5.10.3/lib/minitest.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="165">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/ruby-debug-ide-0.7.0.beta7/lib/ruby-debug-ide.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/courseApp/test/integration/users_signup_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="121" selection-start-line="18" selection-start-column="121" selection-end-line="18" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/courseApp/db/migrate/20190428001708_add_password_digest_to_users.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/courseApp/db/migrate/20190428001413_add_index_to_users_email.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/courseApp/test/models/user_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="57" column="2" selection-start-line="57" selection-start-column="2" selection-end-line="57" selection-end-column="2" />
+        <state relative-caret-position="75">
+          <caret line="5" column="99" selection-start-line="5" selection-start-column="99" selection-end-line="5" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/courseApp/test/fixtures/users.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/courseApp/test/integration/users_login_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/courseApp/db/migrate/20190424082819_create_users.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="46" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/courseApp/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="59" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/courseApp/app/views/layouts/_header.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="6" lean-forward="true" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/courseApp/app/views/users/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
         </state>
       </provider>
     </entry>

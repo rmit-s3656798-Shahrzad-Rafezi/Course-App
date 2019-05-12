@@ -1,4 +1,4 @@
 mike:
   name: Mike
-  email: staff@rmit.edu.au
-  password_digest: <%= User.digest('RMIT1234') %>
+  email: mike.staff@rmit.edu.au
+  password_digest: <%= User.digest('RMIT1234!') %>

@@ -2,7 +2,7 @@ class User < ApplicationRecord
   
   before_save { self.email = email.downcase }
   validates :name, presence: true, length: { maximum: 50, minimum: 4 }
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[rmit]+\.[edu]+\.[au]+\z/i
+  VALID_EMAIL_REGEX = /\A[a-z]+\.[a-z]+\@rmit+\.edu+\.au+\z/
   validates :email, presence: true, length: { maximum: 255, minimum: 4 },
             format: { with: VALID_EMAIL_REGEX, message: "registration only open for RMIT staff" },
             uniqueness: { case_sensitive: false }
