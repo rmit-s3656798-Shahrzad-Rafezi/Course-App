@@ -6,5 +6,6 @@ class StaticPagesController < ApplicationController
   end
 
   def courses
+    @courses = Course.all
   end
 end

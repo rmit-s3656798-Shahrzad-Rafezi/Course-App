@@ -26,7 +26,7 @@
                 <%= image_tag("minibus.jpeg", class: "card-img-top w-100 d-block") %>
                 <div class="card-body">
                   <% @courses.each do |course| %>
-                  <h4 class="card-title"><%= @course.name %></h4>
+                  <h4 class="card-title"><%= course.name %></h4>
                   <h6 class="text-muted card-subtitle mb-2">Coordinator.</h6>
                   <h6 class="text-muted card-subtitle mb-2">Prerequisite.</h6>
                   <h6 class="text-muted card-subtitle mb-2">Category.</h6>
