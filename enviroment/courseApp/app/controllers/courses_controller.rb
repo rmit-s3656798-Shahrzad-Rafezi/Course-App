@@ -1,15 +1,19 @@
 class CoursesController < ApplicationController
 
+def index
+    @courses = Course.all
+end 
+
   def show
-    @course = Course.find(params[:id])
+    @courses = Course.find(params[:id])
   end
 
   def new
-    @course = Course.new
+    @courses = Course.new
   end
 
   def create
-    @course = Course.new(course_params)
+    @courses = Course.new(course_params)
       render 'new'
   end
 
@@ -19,5 +23,5 @@ class CoursesController < ApplicationController
     parparams.require(:course).permit(:name, :prerequisite, :category,
     :description)
   end
-  
+
 end

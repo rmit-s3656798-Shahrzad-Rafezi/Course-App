@@ -25,7 +25,8 @@
               <div class="card mb-4 box-shadow">
                 <%= image_tag("minibus.jpeg", class: "card-img-top w-100 d-block") %>
                 <div class="card-body">
-                  <h4 class="card-title">Java Programming</h4>
+                  <% @courses.each do |course| %>
+                  <h4 class="card-title"><%= @course.name %></h4>
                   <h6 class="text-muted card-subtitle mb-2">Coordinator.</h6>
                   <h6 class="text-muted card-subtitle mb-2">Prerequisite.</h6>
                   <h6 class="text-muted card-subtitle mb-2">Category.</h6>
@@ -33,6 +34,7 @@
                   <h6 class="text-muted card-subtitle mb-2">Created.</h6>
                   <a class="card-link" href="#">Like</a>
                   <a class="card-link" href="#">Dislike</a>
+                  <% end %>
                 </div>
               </div>
             </div>
