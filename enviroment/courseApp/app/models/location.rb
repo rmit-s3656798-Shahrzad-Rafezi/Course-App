@@ -1,3 +1,6 @@
 class Location < ApplicationRecord
-    has_and_belongs_to_one :courses
+
+    has_many :courses
+    has_and_belongs_to_many :categories
+
 end

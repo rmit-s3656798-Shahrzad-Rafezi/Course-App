@@ -1,4 +1,6 @@
 class Vote < ApplicationRecord
-    has_and_belongs_to_many :courses
-    has_and_belongs_to_one :users
+
+    has_many :courses
+    belongs_to :users
+
 end

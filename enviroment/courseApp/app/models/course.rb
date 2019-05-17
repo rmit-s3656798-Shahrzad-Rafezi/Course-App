@@ -1,5 +1,8 @@
 class Course < ApplicationRecord
-    has_and_belongs_to_many :locations
-    has_and_belongs_to_one :categories
-    has_and_belongs_to_many :users
+
+    has_many :categories
+    belongs_to :location
+    belongs_to :users
+    belongs_to :votes
+
 end
