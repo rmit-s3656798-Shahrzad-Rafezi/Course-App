@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_18_012057) do
+ActiveRecord::Schema.define(version: 2019_05_18_021715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,10 @@ ActiveRecord::Schema.define(version: 2019_05_18_012057) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "category_id"
+    t.integer "location_id"
+    t.integer "user_id"
+    t.integer "vote_id"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -57,6 +61,12 @@ ActiveRecord::Schema.define(version: 2019_05_18_012057) do
     t.boolean "disliked"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
+  add_foreign_key "courses", "categories"
+  add_foreign_key "courses", "locations"
+  add_foreign_key "courses", "users"
+  add_foreign_key "courses", "votes"
+  add_foreign_key "votes", "users"
 end
