@@ -9,7 +9,14 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @categories = Category.new(course_params)
-      render 'new'
+    @categories = Category.new(category_params)
+    render 'new'
   end
+
+  private
+
+  def category_params
+    params.require(:category).permit(:name)
+  end
+
 end

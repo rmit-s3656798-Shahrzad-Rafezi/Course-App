@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  
-  get 'courses/index'
-  get 'sessions/new'
+
+  # get  '/courses',  to: 'courses#show'
+  get  '/addCourses',  to: 'courses#new'
+  post '/addCourses',  to: 'courses#create'
+
+  get '/category', to: 'categories#new'
+  post '/category',  to: 'categories#create'
 
   resources :users do
     member do
@@ -29,11 +33,7 @@ Rails.application.routes.draw do
     end
   end 
 
-  resources :categories do
-    member do
-      get :all_courses
-    end
-  end 
+  resources :categories
 
   get 'users/new'
   
