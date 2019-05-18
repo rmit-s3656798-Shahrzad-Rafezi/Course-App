@@ -1,5 +1,8 @@
 class User < ApplicationRecord
   
+  has_many :courses
+  has_one :votes
+
   before_save { self.email = email.downcase }
   validates :name, presence: true, length: { maximum: 50, minimum: 4 }
   VALID_EMAIL_REGEX = /\A[a-z]+\.[a-z]+\@rmit+\.edu+\.au+\z/

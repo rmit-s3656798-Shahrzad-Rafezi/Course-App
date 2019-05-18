@@ -1,4 +1,6 @@
-# This file is auto-generated from the current state of the database. Instead
+class MigrationName < ActiveRecord::Migration[5.2]
+  def change
+    # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
@@ -10,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_18_021715) do
+ActiveRecord::Schema.define(version: 2019_05_16_094803) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,13 +26,14 @@ ActiveRecord::Schema.define(version: 2019_05_18_021715) do
   create_table "courses", force: :cascade do |t|
     t.string "name"
     t.string "prerequisite"
+    t.string "category"
     t.string "description"
+    t.string "categories_id"
+    t.string "locations_id"
+    t.string "users_id"
+    t.string "votes_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "category_id"
-    t.integer "location_id"
-    t.integer "user_id"
-    t.integer "vote_id"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -39,17 +42,11 @@ ActiveRecord::Schema.define(version: 2019_05_18_021715) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "superusers", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "password_digest"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
+    t.string "courses_id"
+    t.string "votes_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
@@ -61,12 +58,9 @@ ActiveRecord::Schema.define(version: 2019_05_18_021715) do
     t.boolean "disliked"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
   end
 
-  add_foreign_key "courses", "categories"
-  add_foreign_key "courses", "locations"
-  add_foreign_key "courses", "users"
-  add_foreign_key "courses", "votes"
-  add_foreign_key "votes", "users"
+end
+
+  end
 end
