@@ -7,7 +7,14 @@ Rails.application.routes.draw do
   get '/category', to: 'categories#new'
   post '/category',  to: 'categories#create'
 
+  get '/location', to: 'locations#new'
+  post '/location',  to: 'locations#create'
+
+
+
   resources :categories
+
+  resources :locations
 
   resources :users do
     member do
@@ -29,11 +36,11 @@ Rails.application.routes.draw do
     end 
   end
 
-  resources :locations do
-    member do
-      get :all_courses
-    end
-  end 
+  # resources :locations do
+  #   member do
+  #     get :all_courses
+  #   end
+  # end
 
 
 

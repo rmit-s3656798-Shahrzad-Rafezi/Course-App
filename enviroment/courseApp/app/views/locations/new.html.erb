@@ -1,0 +1,26 @@
+<% provide(:title, "Add Location") %>
+
+<section class="showcase">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+      <div class="col" style="padding: 20px;margin: 20px;">
+        <h1 class="main-heading">Add Location for courseApp</h1>
+      </div>
+    </div>
+    <div class="row login-form">
+      <div class="col-md-4 offset-md-4">
+        <%= form_for(@location, url: location_path) do |f| %>
+          <%= render 'shared/locations_error_messages' %>
+
+          <div class="form-group">
+            <%= f.text_field :name, class: 'form-control', placeholder: 'Location' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.submit "Add Location", class: "btn btn-light btn-block submit-button" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
