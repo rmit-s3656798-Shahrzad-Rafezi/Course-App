@@ -1,11 +1,19 @@
-<% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
-</div>
+<% provide(:title, "User Profile") %>
+
+<section class="showcase">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+      <div class="col" style="padding: 20px;margin: 20px;">
+        <h1 class="main-heading">Your Profile</h1>
+          <div class="card">
+            <div class="detail">
+            <div class="detail-images"><%= gravatar_for @user %></div>
+            <h3><%= @user.name %></h3>
+            <h4>courseApp Coordinator</h4>
+            <a class="mail" href="mailto:<%= @user.email %>">Send email</a>
+            </div>
+          </div>
+        </div> 
+    </div>
+  </div>
+</section>
