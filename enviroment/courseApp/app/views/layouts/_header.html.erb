@@ -7,40 +7,45 @@
       <span class="navbar-toggler-icon"></span>
     </button>        
     
-<!--    <div class="collapse navbar-collapse" id="navcol-1">-->
-<!--            <ul class="nav navbar-nav nav-right">-->
-<!--                <li class="nav-item dropdown" style="color: rgb(255,255,255);">-->
-<!--                  <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">-->
-<!--                    Category-->
-<!--                  </a>-->
-                  <%# if logged_in? %>
-<!--                    <div role="menu" class="dropdown-menu">-->
-                      <%# @categories.each do |category| %>
-                      <%#= link_to category.name, "#", class:"dropdown-item"%>
-                      <%# end %>
-                      <%#= link_to "Create Category", category_path, class:"dropdown-item", style: "background-color: rgb(47,125,246)"%>
-<!--                    </div>-->
-                  <%# else %>
-<!--                    <div role="menu" class="dropdown-menu">-->
-                      <%# @categories.each do |category| %>
-                        <%#= link_to category.name, "#", class:"dropdown-item"%>
-                      <%# end %>
-<!--                    </div>-->
-                  <%# end %>
-<!--                </li>-->
-<!--                <li class="nav-item dropdown">-->
-<!--                <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">-->
-<!--                  Location -->
-<!--                </a>-->
-<!--                    <div role="menu" class="dropdown-menu">-->
-                      <%#= link_to "14.10.31", "#", class:"dropdown-item"%>
-                      <%#= link_to "14.08.26", "#", class:"dropdown-item"%>
-                      <%#= link_to "14.10.30", "#", class:"dropdown-item"%>
-<!--                    </div>-->
-<!--                </li>-->
-<!--            </ul>-->
+   <div class="collapse navbar-collapse" id="navcol-1">
+           <ul class="nav navbar-nav nav-right">
+          
+           <li class="nav-item dropdown" style="color: rgb(255,255,255);">
+           <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">
+             Category
+           </a>
+           <% if logged_in? %>
+             <div role="menu" class="dropdown-menu">
+               <%= link_to "Create Category", category_path, class:"dropdown-item", style: "background-color: rgb(179, 0, 0)"%>
+             </div>
+           <% else %>
+             <div role="menu" class="dropdown-menu">
+               <% @categories.each do |category| %>
+                 <%= link_to category.name, "#", class:"dropdown-item"%>
+               <% end %>
+             </div>
+           <% end %>
+         </li>
 
-            <% if logged_in? %>
+              <li class="nav-item dropdown">
+              <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">
+                Location 
+              </a>
+              <% if logged_in? %>
+              <div role="menu" class="dropdown-menu">
+                <%= link_to "Add Location", location_path, class:"dropdown-item", style: "background-color: rgb(179, 0, 0)"%>
+              </div>
+              <% else %>
+                <div role="menu" class="dropdown-menu">
+                  <% @location.each do |location| %>
+                    <%= link_to location.name, "#", class:"dropdown-item"%>
+                  <% end %>
+                </div>
+              <% end %>
+            </li>
+           </ul>
+
+          <% if logged_in? %>
             <ul class="nav navbar-nav nav-left">
               <li class="nav-item dropdown" style="color: rgb(255,255,255);">
                 <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">
@@ -60,6 +65,6 @@
                 </p>
             <% end %>
           </ul>
-<!--    </div>-->
+      </div>
   </div>
 </nav>
