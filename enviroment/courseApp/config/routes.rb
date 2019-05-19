@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/category', to: 'categories#new'
   post '/category',  to: 'categories#create'
 
+  resources :categories
+
   resources :users do
     member do
       get :all_courses
@@ -33,7 +35,7 @@ Rails.application.routes.draw do
     end
   end 
 
-  resources :categories
+
 
   get 'users/new'
   
