@@ -12,7 +12,12 @@ class CoursesController < ApplicationController
 
   def create
     @courses = Course.new(course_params)
+    if @courses.save
+      flash[:success] = "You have added a course!"
+      redirect_to @courses
+    else
       render 'new'
+    end
   end
 
   private 

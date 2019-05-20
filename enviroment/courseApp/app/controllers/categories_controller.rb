@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
   def create
     @categories = Category.new(category_params)
     if @categories.save
-      flash[:success] = "You have added a course!"
+      flash[:success] = "You have added a category!"
       redirect_to @categories
     else
       render 'new'
