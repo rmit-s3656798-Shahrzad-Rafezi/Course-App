@@ -10,11 +10,11 @@ Rails.application.routes.draw do
   get '/location', to: 'locations#new'
   post '/location',  to: 'locations#create'
 
-
-
   resources :categories
 
   resources :locations
+
+  resources :courses
 
   resources :users do
     member do
@@ -22,19 +22,19 @@ Rails.application.routes.draw do
     end
   end 
 
-  resources :courses do
-    member do
-      get :categories
-      post :category_add
-      post :category_remove
-      get :locations
-      post :location_add
-      post :location_remove
-      get :users
-      post :user_add
-      post :user_remove
-    end 
-  end
+  # resources :courses do
+  #   member do
+  #     get :categories
+  #     post :category_add
+  #     post :category_remove
+  #     get :locations
+  #     post :location_add
+  #     post :location_remove
+  #     get :users
+  #     post :user_add
+  #     post :user_remove
+  #   end
+  # end
 
   # resources :locations do
   #   member do

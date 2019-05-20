@@ -1,11 +1,13 @@
 class CoursesController < ApplicationController
 
   def show
-    @courses = Course.find(params[:id])
+    @courses = Course.all
   end
 
   def new
     @courses = Course.new
+    @categories = Category.all
+    @location = Location.all
   end
 
   def create
