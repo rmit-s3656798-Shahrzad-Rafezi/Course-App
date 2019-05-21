@@ -26,18 +26,24 @@
             <%#= f.text_field :description, class: 'form-control', placeholder: 'Description' %>
           </div>
 
-          <div class="form-group">
-          <label>Select the category</label>
-            <% @categories.each do |category| %>
-              <%= f.check_box :category_id, {}, true, false %><%= category.name%>
-            <% end %>
-          </div>
+          <div class="container">
+            <div class="row">
+              
+            <div class="col-sm">
+              <label>Category</label>
+              <% @categories.each do |category| %>
+                <%= f.check_box :category_id, {}, true, false %><%= category.name%>
+              <% end %>    
+              </div>
 
-          <div class="form-group">
-          <label>Select the room</label>
-            <% @location.each do |location| %>
-              <%= f.check_box :location_id, {}, true, false %><%= location.name%>
-            <% end %>
+              <div class="col-sm">
+              <label>Location</label>
+              <% @location.each do |location| %>
+                <%= f.check_box :location_id, {}, true, false %><%= location.name%>
+              <% end %>    
+              </div>
+
+            </div>
           </div>
 
           <%= f.submit "Add Course", class: "btn btn-light btn-block submit-button" %>
