@@ -27,6 +27,22 @@ class CoursesController < ApplicationController
     end
   end
 
+  def edit
+    @courses = Course.find(params[:id])
+    @categories = Category.all
+    @location = Location.all
+  end
+
+  def update
+    @courses = Course.find(params[:id])
+    if @courses.update_attributes(user_params)
+      flash[:success] = "Course updated"
+      redirect_to @courses
+    else
+      render 'edit'
+    end
+  end
+
   private
 
   def course_params
