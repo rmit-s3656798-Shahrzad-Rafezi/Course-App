@@ -1,6 +1,6 @@
 class Location < ApplicationRecord
 
-    has_many :courses
+    has_and_belongs_to_many :courses
     has_and_belongs_to_many :categories
 
     VALID_LOCATION_REGEX = /\A\d*[.]\d*[.]\d*\z/

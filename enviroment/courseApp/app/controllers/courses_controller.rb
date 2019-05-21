@@ -1,6 +1,7 @@
 class CoursesController < ApplicationController
 
   def show
+    @courses = Course.find(params[:id])
     @courses = Course.all
   end
 
@@ -11,6 +12,8 @@ class CoursesController < ApplicationController
   end
 
   def create
+    @categories = Category.all
+    @location = Location.all
     @courses = Course.new(course_params)
     if @courses.save
       flash[:success] = "You have added a course!"
