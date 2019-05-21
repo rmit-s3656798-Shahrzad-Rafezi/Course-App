@@ -46,7 +46,7 @@
         <div class="col-12 col-sm-4 col-md-4 col-lg-4">
           <div class="login-card">
             <% @user.each do |user| %>
-            <%= image_tag("avatar-dhg.png", class: "profile-img-card") %>
+            <p class="profile-img-card"><%= gravatar_for user %></p>
             <p class="profile-name-card"><%= user.name %></p>
             <% end %>
           </div>
