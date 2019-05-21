@@ -6,6 +6,7 @@ class CoursesController < ApplicationController
 
   def showCourses
     @courses = Course.all
+    @user = User.all
   end
 
   def new

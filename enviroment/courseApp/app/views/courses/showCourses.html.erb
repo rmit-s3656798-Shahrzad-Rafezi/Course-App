@@ -1,10 +1,3 @@
-
-        <%# @courses.each do |course| %>
-          <%#= course.name %>
-        <%# end %>
-
-
-
 <% provide(:title, 'Course') %>
 <section class="showcase">
   <div class="container-fluid p-0">
@@ -28,14 +21,13 @@
       <section style="padding-top: 20px;">
         <div class="container">
           <div class="row">
-
             <% @courses.each do |course| %>
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
                 <%#= gravatar_for @user %>
                 <div class="card-body">
                     <h4 class="card-title"><%= course.name %></h4>
-                    <h6 class="text-muted card-subtitle mb-2">Coordinator:<%= course.user_id %></h6>
+                    <h6 class="text-muted card-subtitle mb-2">Coordinator: <%= course.user_id %></h6>
                     <h6 class="text-muted card-subtitle mb-2">Prerequisite: <%= course.prerequisite %></h6>
                     <h6 class="text-muted card-subtitle mb-2">Category: <%= course.category_id %></h6>
                     <h6 class="text-muted card-subtitle mb-2">Location: <%= course.location_id %></h6>
@@ -43,7 +35,6 @@
                     <a class="card-link" href="#">Like</a>
                     <a class="card-link" href="#">Dislike</a>
                 </div>
-
               </div>
             </div>
             <% end %>
@@ -56,22 +47,27 @@
       <div class="row">
         <div class="col-12 col-sm-4 col-md-4 col-lg-4">
           <div class="login-card">
+            <% @user.each do |user| %>
             <%= image_tag("avatar-dhg.png", class: "profile-img-card") %>
-            <p class="profile-name-card">Andy Song</p>
+            <p class="profile-name-card"><%= user.name %></p>
+            <% end %>
           </div>
         </div>
-        <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-          <div class="login-card">
-            <%= image_tag("avatar-dhg.png", class: "profile-img-card") %>
-            <p class="profile-name-card">Alex Jiang</p>
-          </div>
-        </div>
-        <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-          <div class="login-card">
-            <%= image_tag("avatar-dhg.png", class: "profile-img-card") %>
-            <p class="profile-name-card">Ali Yavari</p>
-          </div>
-        </div>
+
+<!--        <div class="col-12 col-sm-4 col-md-4 col-lg-4">-->
+<!--          <div class="login-card">-->
+            <%#= image_tag("avatar-dhg.png", class: "profile-img-card") %>
+<!--            <p class="profile-name-card">Alex Jiang</p>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-12 col-sm-4 col-md-4 col-lg-4">-->
+<!--          <div class="login-card">-->
+            <%#= image_tag("avatar-dhg.png", class: "profile-img-card") %>
+<!--            <p class="profile-name-card">Ali Yavari</p>-->
+<!--          </div>-->
+<!--        </div>-->
+
       </div>
     </div>
   </div>
