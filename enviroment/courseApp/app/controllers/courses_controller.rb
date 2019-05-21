@@ -4,6 +4,10 @@ class CoursesController < ApplicationController
     @courses = Course.find(params[:id])
   end
 
+  def showCourses
+    @courses = Course.all
+  end
+
   def new
     @courses = Course.new
     @categories = Category.all
@@ -22,7 +26,7 @@ class CoursesController < ApplicationController
     end
   end
 
-  private 
+  private
 
   def course_params
     params.require(:course).permit(:name, :prerequisite, :description)
