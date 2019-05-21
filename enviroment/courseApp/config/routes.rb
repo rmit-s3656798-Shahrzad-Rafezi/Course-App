@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get  '/courses',  to: 'courses#showCourses'
-
   get  '/addCourses',  to: 'courses#new'
   post '/addCourses',  to: 'courses#create'
 
