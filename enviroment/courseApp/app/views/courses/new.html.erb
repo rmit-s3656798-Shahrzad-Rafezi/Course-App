@@ -1,5 +1,4 @@
 <% provide(:title, "Add Course") %>
-
 <section class="showcase">
   <div class="container-fluid p-0">
     <div class="row no-gutters">
@@ -7,7 +6,6 @@
         <h1 class="main-heading">Add Course for courseApp</h1>
       </div>
     </div>
-
     <div class="row login-form">
       <div class="col-md-4 offset-md-4">
         <%= form_for(@courses, url: addCourses_path) do |f| %>
@@ -45,7 +43,6 @@
 
             </div>
           </div>
-
           <%= f.submit "Add Course", class: "btn btn-light btn-block submit-button" %>
         <% end %>
       </div>
