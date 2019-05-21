@@ -22,7 +22,7 @@
           <a class="card-link" href="#">Like</a>
           <a class="card-link" href="#">Dislike</a>
           <!--Most Likely having trouble here. How to make it to current_course?-->
-          <a class="card-link" href="#"><%= link_to "edit", edit_course_path() %></a>
+          <a class="card-link" href="#"><%= link_to "edit", edit_course_path(course.id) %></a>
         </div>
       </div>
     </div>
