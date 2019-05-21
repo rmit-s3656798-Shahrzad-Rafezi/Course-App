@@ -20,10 +20,6 @@ class CoursesController < ApplicationController
     @location = Location.all
     @courses = Course.new(course_params)
     if @courses.save
-      query == <<-SQL
-        INSERT INTO categories (name), locations (name), users (name)
-      SQL
-      ActiveRecord::Base.connection.execute(query)
       flash[:success] = "You have added a course!"
       redirect_to @courses
     else
