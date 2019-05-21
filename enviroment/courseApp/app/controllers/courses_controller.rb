@@ -4,7 +4,7 @@ class CoursesController < ApplicationController
     @courses = Course.find(params[:id])
   end
 
-  def showCourses
+  def index
     @courses = Course.all
     @user = User.all
   end
@@ -16,9 +16,9 @@ class CoursesController < ApplicationController
   end
 
   def create
+    @courses = Course.new(course_params)
     @categories = Category.all
     @location = Location.all
-    @courses = Course.new(course_params)
     if @courses.save
       query == <<-SQL
         INSERT INTO categories (name), locations (name), users (name)
