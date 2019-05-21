@@ -7,7 +7,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navcol-1">
       <ul class="nav navbar-nav nav-right">
-        <%= link_to "Add Course", addCourses_path%>
       </ul>
 
     <!--    <div class="collapse navbar-collapse" id="navcol-1">-->
@@ -53,6 +52,7 @@
             <%= link_to "Log out", logout_path, method: :delete, class:"dropdown-item"%>
           </div>
         </li>
+        <p class="ml-auto navbar-text actions"><%= link_to "Add Course", addCourses_path%></p>
     <% else %>
       <p class="ml-auto navbar-text actions">
         <%= link_to "Login", login_path, class:"login"%>
