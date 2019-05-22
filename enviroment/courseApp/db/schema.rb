@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_18_021715) do
+ActiveRecord::Schema.define(version: 2019_05_22_003138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,10 +27,16 @@ ActiveRecord::Schema.define(version: 2019_05_18_021715) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "category_id"
-    t.integer "location_id"
-    t.integer "user_id"
-    t.integer "vote_id"
+    t.bigint "category_id"
+    t.bigint "location_id"
+    t.bigint "user_id"
+    t.bigint "vote_id"
+    t.index ["category_id"], name: "index_courses_on_category_id"
+    t.index ["location_id", "vote_id"], name: "index_courses_on_location_id_and_vote_id"
+    t.index ["location_id"], name: "index_courses_on_location_id"
+    t.index ["user_id", "category_id"], name: "index_courses_on_user_id_and_category_id"
+    t.index ["user_id"], name: "index_courses_on_user_id"
+    t.index ["vote_id"], name: "index_courses_on_vote_id"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -53,6 +59,8 @@ ActiveRecord::Schema.define(version: 2019_05_18_021715) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
+    t.string "remember_digest"
+    t.boolean "superuser", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
@@ -61,7 +69,8 @@ ActiveRecord::Schema.define(version: 2019_05_18_021715) do
     t.boolean "disliked"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_votes_on_user_id"
   end
 
   add_foreign_key "courses", "categories"
