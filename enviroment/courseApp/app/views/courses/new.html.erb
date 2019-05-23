@@ -30,15 +30,15 @@
             <div class="col-sm">
               <label>Category</label>
               <% @categories.each do |category| %>
-                <%= f.check_box :category_id, {}, true, false %><%= category.name%>
+                <%= f.check_box :category_id, { multiple: true }, category.id %><%= location.name%>
               <% end %>    
               </div>
 
               <div class="col-sm">
               <label>Location</label>
               <% @location.each do |location| %>
-                <%= f.check_box :location_id, {}, true, false %><%= location.name%>
-              <% end %>    
+                <%= f.check_box :location_id, { multiple: true }, location.id %><%= location.name%>
+                <% end %>    
               </div>
 
             </div>
