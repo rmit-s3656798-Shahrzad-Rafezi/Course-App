@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   
-  has_many :courses
+  has_and_belongs_to_many :courses
   has_one :votes
 
   before_save { self.email = email.downcase }
