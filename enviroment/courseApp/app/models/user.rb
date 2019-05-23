@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  
+
+  # has_one :courses
   has_and_belongs_to_many :courses
   has_one :votes
 
