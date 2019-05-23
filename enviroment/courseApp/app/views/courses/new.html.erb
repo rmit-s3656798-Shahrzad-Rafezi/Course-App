@@ -30,7 +30,7 @@
             <div class="col-sm">
               <label>Category</label>
               <% @categories.each do |category| %>
-                <%= f.check_box :category_id, { multiple: true }, category.id %><%= location.name%>
+                <%= f.check_box :category_id, { multiple: true }, category.id %><%= category.name%>
               <% end %>    
               </div>
 
