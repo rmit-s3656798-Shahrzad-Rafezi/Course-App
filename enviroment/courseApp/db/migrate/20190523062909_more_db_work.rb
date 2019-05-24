@@ -10,7 +10,7 @@ class MoreDbWork < ActiveRecord::Migration[5.2]
       t.datetime "updated_at", null: false
       t.bigint "category_id"
       t.bigint "location_id"
-      t.bigint "user_id"
+      t.integer "user_id"
       t.index ["category_id"], name: "index_courses_on_category_id"
       t.index ["location_id"], name: "index_courses_on_location_id"
       t.index ["user_id"], name: "index_courses_on_user_id"

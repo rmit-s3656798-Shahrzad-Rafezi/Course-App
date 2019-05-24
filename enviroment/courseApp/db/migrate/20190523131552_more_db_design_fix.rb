@@ -7,26 +7,15 @@ class MoreDbDesignFix < ActiveRecord::Migration[5.2]
       t.datetime "updated_at", null: false
     end
 
-    create_table "categories_courses", force: :cascade do |t|
-      t.bigint "category_id"
-      t.bigint "course_id"
-    end
-  
     create_table "courses", force: :cascade do |t|
       t.string "name"
       t.string "prerequisite"
       t.string "description"
-      t.bigint "user_id"
+      t.integer "user_id"
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
-      t.bigint "user_id"
     end
 
-    create_table "locations_courses", force: :cascade do |t|
-      t.bigint "location_id"
-      t.bigint "course_id"
-    end
-  
     create_table "locations", force: :cascade do |t|
       t.string "name"
       t.datetime "created_at", null: false

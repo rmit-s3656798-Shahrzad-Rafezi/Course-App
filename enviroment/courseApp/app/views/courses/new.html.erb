@@ -10,6 +10,8 @@
       <div class="col-md-4 offset-md-4">
         <%= form_for(@courses, url: addCourses_path) do |f| %>
           <%= render 'shared/courses_error_messages' %>
+          <%= hidden_field_tag :user_id, value: current_user.id %>
+          <%= current_user.id %>
 
           <div class="form-group">
             <%= f.text_field :name, class: 'form-control', placeholder: 'Name' %>
@@ -29,16 +31,18 @@
               
             <div class="col-sm">
               <label>Category</label>
-              <% @categories.each do |category| %>
-                <%= f.check_box :id, { multiple: true }, category.id, nil %><%= category.name%>
+              <%= hidden_field_tag "course[category_ids][]", nil %>
+              <% Category.all.each do |category| %>
+                <%= check_box_tag "course[category_ids][]", category.id, f.object.categories.include?(category)%><%= category.name %>
               <% end %>
               </div>
 
               <div class="col-sm">
               <label>Location</label>
-              <% @location.each do |location| %>
-                <%= f.check_box :id, { multiple: true }, location.id %><%= location.name%>
-                <% end %>    
+                <%= hidden_field_tag "course[location_ids][]", nil %>
+                <% Location.all.each do |location| %>
+                  <%= check_box_tag "course[location_ids][]", location.id, f.object.locations.include?(location)%><%= location.name %>
+                <% end %>
               </div>
 
             </div>
