@@ -9,7 +9,19 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @categories = Category.new(course_params)
+    @categories = Category.new(category_params)
+    if @categories.save
+      flash[:success] = "You have added a category!"
+      redirect_to @categories
+    else
       render 'new'
+    end
   end
+
+  private
+
+  def category_params
+    params.require(:category).permit(:name)
+  end
+
 end
