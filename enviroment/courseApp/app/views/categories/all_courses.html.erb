@@ -13,18 +13,24 @@
     <div class="col-lg-4">
       <div class="card mb-4 box-shadow">
         <div class="card-body">
-          <h4 class="card-title"><%= course.name %></h4>
-          <h6 class="text-muted card-subtitle mb-2">Coordinator: <%= course.user.try(:name) %></h6>
-          <h6 class="text-muted card-subtitle mb-2">Prerequisite: <%= course.prerequisite %></h6>
-          <% course.categories.each do |category| %>
-            <h6 class="text-muted card-subtitle mb-2">Category: <%= category.name %></h6>
-          <%end %>
-          <% course.locations.each do |location| %>
-            <h6 class="text-muted card-subtitle mb-2">Location: <%= location.name %></h6>
-          <%end %>
-          <h6 class="text-muted card-subtitle mb-2">Created: <%= course.created_at %></h6>
-          <a class="card-link" href="#">Like</a>
-          <a class="card-link" href="#">Dislike</a>
+            <h4 class="card-title"><%= course.name %></h4>
+            <h6 class="text-muted card-subtitle mb-2">Coordinator: <br> <%= course.user.try(:name) %></h6>
+            <br>
+            <h6 class="text-muted card-subtitle mb-2">Prerequisite: <br> <%= course.prerequisite %></h6>
+            <br>
+            <h6 class="text-muted card-subtitle mb-2">Category:
+                <% course.categories.each do |category| %>
+                <h6 class="text-muted card-subtitle mb-2"><%= link_to category.name, all_courses_category_path(id: category.id), id: "link" %></h6>
+                <%end %>
+            <br>
+            <h6 class="text-muted card-subtitle mb-2">Location:
+                <% course.locations.each do |location| %>
+                <h6 class="text-muted card-subtitle mb-2"><%= link_to location.name, all_courses_location_path(id: location.id), id: "link" %></h6>
+                <%end %>
+            <br>
+            <h6 class="text-muted card-subtitle mb-2">Created: <br> <%= course.created_at %></h6>
+            <a class="card-link" href="#">Like</a>
+            <a class="card-link" href="#">Dislike</a>
         </div>
       </div>
     </div>
