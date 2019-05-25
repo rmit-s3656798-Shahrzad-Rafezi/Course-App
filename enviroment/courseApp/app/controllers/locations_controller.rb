@@ -8,8 +8,6 @@ class LocationsController < ApplicationController
     @locations = Location.new
   end
 
-
-
   def all_courses
     @locations = Location.find(params[:id])
     @courses = @locations.courses.all
