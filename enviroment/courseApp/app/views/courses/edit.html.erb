@@ -8,7 +8,7 @@
     </div>
     <div class="row login-form">
       <div class="col-md-4 offset-md-4">
-        <%= form_for(@courses, url: addCourses_path) do |f| %>
+        <%= form_for(@courses) do |f| %>
           <%= render 'shared/courses_error_messages' %>
           <%= hidden_field_tag :user_id, value: current_user.id %>
 

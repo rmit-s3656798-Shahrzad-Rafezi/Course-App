@@ -8,9 +8,11 @@ class LocationsController < ApplicationController
     @locations = Location.new
   end
 
+
+
   def all_courses
     @locations = Location.find(params[:id])
-    @courses = Course.all
+    @courses = @locations.courses.all
   end
 
   def create

@@ -5,16 +5,8 @@ class CoursesController < ApplicationController
   end
 
   def index
-    if params[:location]
-      location = Location.find(params[:location]) || nil
-      @courses = location.courses
-    elsif params[:category]
-      category = Category.find(params[:category])
-      @courses = category.courses
-    else
     @courses = Course.all
     @user = User.all
-    end
   end
 
   def new
@@ -38,7 +30,6 @@ class CoursesController < ApplicationController
 
   def update
     @courses = Course.find(params[:id])
-
     if @courses.update_attributes(course_params)
       flash[:success] = "Course updated"
       redirect_to @courses
