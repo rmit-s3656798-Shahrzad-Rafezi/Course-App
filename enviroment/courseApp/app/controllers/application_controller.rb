@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
     include SessionsHelper
 
     def display
-        @categories = Category.all
+        @category = Category.all
         @location = Location.all
     end
 end

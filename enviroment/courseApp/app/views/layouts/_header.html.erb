@@ -13,7 +13,7 @@
           <li class="nav-item dropdown" style="color: rgb(255,255,255);">
             <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">Category</a>
               <div role="menu" class="dropdown-menu">
-                <% @categories.each do |category| %>
+                <% @category.each do |category| %>
                   <%= link_to category.name, "#", class:"dropdown-item"%>
                 <% end %>
                 <% if logged_in? %>

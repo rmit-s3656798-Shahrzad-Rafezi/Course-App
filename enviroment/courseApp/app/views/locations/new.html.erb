@@ -1,5 +1,4 @@
 <% provide(:title, "Add Location") %>
-
 <section class="showcase">
   <div class="container-fluid p-0">
     <div class="row no-gutters">
@@ -9,7 +8,7 @@
     </div>
     <div class="row login-form">
       <div class="col-md-4 offset-md-4">
-        <%= form_for(@location, url: location_path) do |f| %>
+        <%= form_for(@locations, url: location_path) do |f| %>
           <%= render 'shared/locations_error_messages' %>
 
           <div class="form-group">
