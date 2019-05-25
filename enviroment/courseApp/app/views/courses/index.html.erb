@@ -56,8 +56,8 @@
         <div class="col-12 col-sm-4 col-md-4 col-lg-4">
           <div class="login-card">
             <% @user.each do |user| %>
-            <p class="profile-img-card"><%= gravatar_for user %></p>
-            <p class="profile-name-card"><%= user.name %></p>
+                <p class="profile-img-card" style="margin-bottom: 0px;"><%= gravatar_for user %></p>
+                <p class="profile-name-card"><%= user.name %></p>
             <% end %>
           </div>
         </div>
