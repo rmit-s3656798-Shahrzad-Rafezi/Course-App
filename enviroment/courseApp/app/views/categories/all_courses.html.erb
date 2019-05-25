@@ -1,24 +1,15 @@
-<% provide(:title, @user.name) %>
+<% provide(:title, "Filter Result") %>
 <section class="showcase">
   <div class="container-fluid p-0">
     <div class="row no-gutters">
       <div class="col" style="padding: 20px;margin: 20px;">
-        <h1 class="main-heading">Your Profile</h1>
-          <div class="card">
-            <div class="detail">
-            <div class="detail-images"><%= gravatar_for @user %></div>
-            <h3><%= @user.name %></h3>
-            <h4>courseApp Coordinator</h4>
-            <a class="mail" href="mailto:<%= @user.email %>">Send email</a>
-            </div>
-          </div>
-        </div> 
+        <h1 class="main-heading">Courses in <%= @categories.name %></h1>
+      </div> 
     </div>
   </div>
 </section>
 <div class="row">
   <% @courses.each do |course| %>
-    <%if course.user_id == @user.id %>
     <div class="col-lg-4">
       <div class="card mb-4 box-shadow">
         <div class="card-body">
@@ -40,10 +31,8 @@
             <h6 class="text-muted card-subtitle mb-2">Created: <br> <%= course.created_at %></h6>
             <a class="card-link" href="#">Like</a>
             <a class="card-link" href="#">Dislike</a>
-            <a class="card-link" href="#"><%= link_to "Edit", edit_course_path(course.id) %></a>
         </div>
       </div>
     </div>
   <% end %>
-<% end %>
 </div>

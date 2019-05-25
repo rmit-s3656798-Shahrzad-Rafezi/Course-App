@@ -12,9 +12,17 @@ Rails.application.routes.draw do
   get '/location', to: 'locations#new'
   post '/location',  to: 'locations#create'
 
-  resources :categories
+  resources :categories do
+    member do
+      get :all_courses
+    end
+  end 
 
-  resources :locations
+  resources :locations do
+    member do
+      get :all_courses
+    end
+  end 
 
   resources :courses
 

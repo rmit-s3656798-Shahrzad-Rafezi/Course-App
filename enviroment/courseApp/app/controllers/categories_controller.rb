@@ -8,6 +8,11 @@ class CategoriesController < ApplicationController
     @categories = Category.new
   end
 
+  def all_courses
+    @categories = Category.find(params[:id])
+    @courses = @categories.courses.all
+  end
+
   def create
     @categories = Category.new(category_params)
     if @categories.save
