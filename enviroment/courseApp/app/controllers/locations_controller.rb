@@ -8,6 +8,10 @@ class LocationsController < ApplicationController
     @locations = Location.new
   end
 
+  def all_courses
+    @locations = Location.find(params[:id])
+  end
+
   def create
     @locations = Location.new(location_params)
     if @locations.save

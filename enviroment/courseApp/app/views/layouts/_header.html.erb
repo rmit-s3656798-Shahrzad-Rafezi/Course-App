@@ -14,7 +14,7 @@
             <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">Category</a>
               <div role="menu" class="dropdown-menu">
                 <% @category.each do |category| %>
-                  <%= link_to category.name, "#", class:"dropdown-item"%>
+                  <%= link_to category.name, all_courses_category_path(id: category.id), class:"dropdown-item"%>
                 <% end %>
                 <% if logged_in? %>
                   <%= link_to "Create Category", category_path, class:"dropdown-item", style: "background-color: rgb(179, 0, 0)"%>
@@ -25,7 +25,7 @@
             <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">Location </a>
             <div role="menu" class="dropdown-menu">
               <% @location.each do |location| %>
-                <%= link_to location.name, "#", class:"dropdown-item"%>
+                <%= link_to location.name, all_courses_location_path(id: location.id), class:"dropdown-item"%>
               <% end %>
               <% if logged_in? %>
                 <%= link_to "Add Location", location_path, class:"dropdown-item", style: "background-color: rgb(179, 0, 0)"%>
