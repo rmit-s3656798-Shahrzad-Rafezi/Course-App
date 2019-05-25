@@ -29,17 +29,19 @@
 
               <div class="col-sm">
                 <label>Category</label>
-                <% @categories.each do |category| %>
-                  <%= f.check_box :category_id, {}, true, false %><%= category.name%>
+                <%= hidden_field_tag "course[category_ids][]", nil %>
+                <% Category.all.each do |category| %>
+                  <%= check_box_tag "course[category_ids][]", category.id, f.object.categories.include?(category)%><%= category.name %>
                 <% end %>
-              </div>
+                </div>
 
-              <div class="col-sm">
+                <div class="col-sm">
                 <label>Location</label>
-                <% @location.each do |location| %>
-                  <%= f.check_box :location_id, {}, true, false %><%= location.name%>
-                <% end %>
-              </div>
+                  <%= hidden_field_tag "course[location_ids][]", nil %>
+                  <% Location.all.each do |location| %>
+                    <%= check_box_tag "course[location_ids][]", location.id, f.object.locations.include?(location)%><%= location.name %>
+                  <% end %>
+                </div>
 
             </div>
           </div>
