@@ -411,10 +411,24 @@ input, textarea, select, .uneditable-input {
 	}
   }
 
-  .showcase-img-1{
-    background-image: url("bg-showcase-2.jpg");
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
   }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+.showcase-img-1{
+	background-image: url("bg-showcase-2.jpg");
+}
 
 .showcase-img-2{
-  background-image: url("bg-showcase-1.jpg");
+  	background-image: url("bg-showcase-1.jpg");
 }
