@@ -32,11 +32,11 @@
               <% end %>
             </div>
           </li>
-          <p class="ml-auto navbar-text actions"><%= link_to "Add Course", addCourses_path%></p>
         </ul>
 
     <% if logged_in? %>
       <ul class="nav navbar-nav nav-left">
+      <p class="ml-auto navbar-text actions"><%= link_to "Add Course", addCourses_path%></p>
         <li class="nav-item dropdown" style="color: rgb(255,255,255);">
           <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">Account</a>
           <div role="menu" class="dropdown-menu">
