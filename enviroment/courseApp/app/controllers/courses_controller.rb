@@ -16,7 +16,7 @@ class CoursesController < ApplicationController
   end
 
   def create
-    @courses = Course.new(course_params)
+    @courses = current_user.courses.new(course_params)
 
     if @courses.save
       flash[:success] = "You have added a course!"

@@ -26,7 +26,7 @@
                 <%#= gravatar_for @user %>
                 <div class="card-body">
                     <h4 class="card-title"><%= course.name %></h4>
-                    <h6 class="text-muted card-subtitle mb-2">Coordinator: <%= course.user_id %></h6>
+                    <h6 class="text-muted card-subtitle mb-2">Coordinator: <%= course.user.try(:name) %></h6>
                     <h6 class="text-muted card-subtitle mb-2">Prerequisite: <%= course.prerequisite %></h6>
                   <% course.categories.each do |category| %>
                     <h6 class="text-muted card-subtitle mb-2">Category: <%= category.name %></h6>
