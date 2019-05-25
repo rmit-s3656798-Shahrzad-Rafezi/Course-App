@@ -10,6 +10,7 @@ class CategoriesController < ApplicationController
 
   def all_courses
     @categories = Category.find(params[:id])
+    @courses = Course.all
   end
 
   def create

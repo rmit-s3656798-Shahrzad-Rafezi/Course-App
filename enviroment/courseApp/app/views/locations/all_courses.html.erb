@@ -10,7 +10,6 @@
 </section>
 <div class="row">
   <% @courses.each do |course| %>
-    <%if course.user_id == @user.id %>
     <div class="col-lg-4">
       <div class="card mb-4 box-shadow">
         <div class="card-body">
@@ -30,6 +29,5 @@
         </div>
       </div>
     </div>
-      <%end %>
   <% end %>
 </div>

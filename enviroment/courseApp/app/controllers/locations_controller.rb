@@ -10,6 +10,7 @@ class LocationsController < ApplicationController
 
   def all_courses
     @locations = Location.find(params[:id])
+    @courses = Course.all
   end
 
   def create
