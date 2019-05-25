@@ -11,8 +11,6 @@ class CoursesController < ApplicationController
 
   def new
     @courses = Course.new
-    @categories = Category.all
-    @location = Location.all
   end
 
   def create
@@ -28,14 +26,11 @@ class CoursesController < ApplicationController
 
   def edit
     @courses = Course.find(params[:id])
-    @categories = Category.all
-    @location = Location.all
   end
 
   def update
     @courses = Course.find(params[:id])
-    @categories = Category.all
-    @location = Location.all
+
     if @courses.update_attributes(course_params)
       flash[:success] = "Course updated"
       redirect_to @courses

@@ -11,7 +11,6 @@
         <%= form_for(@courses, url: addCourses_path) do |f| %>
           <%= render 'shared/courses_error_messages' %>
           <%= hidden_field_tag :user_id, value: current_user.id %>
-          <%= current_user.id %>
 
           <div class="form-group">
             <%= f.text_field :name, class: 'form-control', placeholder: 'Name' %>
@@ -47,9 +46,7 @@
 
             </div>
           </div>
-
           <br><%= f.file_field :image %>
-
           <%= f.submit "Add Course", class: "btn btn-light btn-block submit-button" %>
         <% end %>
       </div>
