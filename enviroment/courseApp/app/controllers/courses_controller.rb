@@ -5,8 +5,16 @@ class CoursesController < ApplicationController
   end
 
   def index
+    if params[:location]
+      location = Location.find(params[:location]) || nil
+      @courses = location.courses
+    elsif params[:category]
+      category = Category.find(params[:category])
+      @courses = category.courses
+    else
     @courses = Course.all
     @user = User.all
+    end
   end
 
   def new
