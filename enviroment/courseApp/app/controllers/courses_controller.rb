@@ -11,14 +11,11 @@ class CoursesController < ApplicationController
 
   def new
     @courses = Course.new
-    @categories = Category.all
-    @location = Location.all
   end
 
   def create
-    @courses = Course.new(course_params)
-    @categories = Category.all
-    @location = Location.all
+    @courses = current_user.courses.new(course_params)
+
     if @courses.save
       flash[:success] = "You have added a course!"
       redirect_to @courses
@@ -29,14 +26,11 @@ class CoursesController < ApplicationController
 
   def edit
     @courses = Course.find(params[:id])
-    @categories = Category.all
-    @location = Location.all
   end
 
   def update
     @courses = Course.find(params[:id])
-    @categories = Category.all
-    @location = Location.all
+
     if @courses.update_attributes(course_params)
       flash[:success] = "Course updated"
       redirect_to @courses
@@ -48,7 +42,7 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    params.require(:course).permit(:name, :prerequisite, :description, :image, location_id: [], category_id: [])
+    params.require(:course).permit(:user_id, :name, :prerequisite, :description, :image, {location_ids: []}, {category_ids: []})
   end
 
 end

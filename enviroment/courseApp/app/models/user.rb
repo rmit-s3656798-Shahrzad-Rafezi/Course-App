@@ -1,7 +1,7 @@
 class User < ApplicationRecord
 
   # has_one :courses
-  has_and_belongs_to_many :courses
+  has_many :courses, inverse_of: :user
   has_one :votes
 
   before_save { self.email = email.downcase }
