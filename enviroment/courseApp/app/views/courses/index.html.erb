@@ -41,8 +41,8 @@
                       <%end %>
                     <br>
                     <h6 class="text-muted card-subtitle mb-2">Created: <br> <%= course.created_at.strftime("%d/%m/%Y") %></h6>
-                      <a class="card-link" href="#">Like</a>
-                    <a class="card-link" href="#">Dislike</a>
+                    <div><%= pluralize(course.votes.count, "+ vote") %></div>
+                    <div><%= pluralize(course.votes.count, "- vote") %></div>
                 </div>
               </div>
             </div>
