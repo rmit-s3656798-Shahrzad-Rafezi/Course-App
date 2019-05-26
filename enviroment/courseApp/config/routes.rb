@@ -24,7 +24,12 @@ Rails.application.routes.draw do
     end
   end 
 
-  resources :courses
+  resources :courses do
+    member do
+      post 'upvote'
+      post 'downvote'
+    end
+  end
 
   resources :users do
     member do
