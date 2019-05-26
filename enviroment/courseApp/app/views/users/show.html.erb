@@ -38,7 +38,7 @@
                 <%end %>
             <br>
             <h6 class="text-muted card-subtitle mb-2">Created: <br> <%= course.created_at.strftime("%d/%m/%Y") %></h6>
-            <%= button_to '+1', upvote_vote_path(vote), method: :post %>
+            <%= button_to '+1', upvote_vote_path(course_id), method: :post %>
             <a class="card-link" href="#">Dislike</a>
             <a class="card-link" href="#"><%= link_to "Edit", edit_course_path(course.id) %></a>
         </div>
