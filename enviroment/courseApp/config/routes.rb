@@ -24,7 +24,9 @@ Rails.application.routes.draw do
     end
   end 
 
-  resources :courses do
+  resources :courses
+
+  resources :votes do
     member do
       post 'upvote'
       post 'downvote'

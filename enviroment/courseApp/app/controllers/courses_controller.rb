@@ -1,7 +1,7 @@
 class CoursesController < ApplicationController
 
-  before_action :logged_in_user, only: [:edit, :update, :upvote, :downvote]
-  before_action :correct_user,   only: [:edit, :update, :upvote, :downvote]
+  before_action :logged_in_user, only: [:edit, :update]
+  before_action :correct_user,   only: [:edit, :update]
 
   def show
     @courses = Course.find(params[:id])
@@ -39,16 +39,6 @@ class CoursesController < ApplicationController
     else
       render 'edit'
     end
-  end
-
-  def upvote
-    @courses = Course.find(params[:id])
-    @courses.users.votes.create
-    redirect_to(courses_path)
-  end
-
-  # should be implemented for the admin functionality, which they can reset votes.
-  def downvote
   end
 
   private

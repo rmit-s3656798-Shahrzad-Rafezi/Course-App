@@ -2,7 +2,8 @@ class User < ApplicationRecord
 
   # has_one :courses
   has_many :courses, inverse_of: :user
-  has_one :votes
+  # has_one :votes
+  has_many :votes
 
   attr_accessor :remember_token
 
