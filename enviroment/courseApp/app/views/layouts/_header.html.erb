@@ -1,7 +1,11 @@
 <nav class="navbar navbar-light navbar-expand-md navbar-fixed-top navigation-clean-button">
 
   <div class="container">
-    <span><%= link_to "courseApp", root_path, class:"navbar-brand"%></span>
+    <% if logged_in? %>
+      <span><%= link_to "courseApp", courses_path, class:"navbar-brand"%></span>
+    <% else %>
+      <span><%= link_to "courseApp", root_path, class:"navbar-brand"%></span>
+    <% end %>
     <button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler">
       <span class="sr-only">Toggle navigation</span>
     </button>
