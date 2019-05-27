@@ -3,11 +3,9 @@
 one:
   name: MyString
   prerequisite: MyString
-  image: MyString
   description: MyString
 
 two:
   name: MyString
   prerequisite: MyString
-  image: MyString
   description: MyString
