@@ -431,9 +431,21 @@ input, textarea, select, .uneditable-input {
   	background-image: url("bg-showcase-1.jpg");
 }
 
-/* Users index */
+/* categories index */
 
 .category {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid;
+  }
+}
+
+/* locations index */
+
+.locations {
   list-style: none;
   margin: 0;
   li {

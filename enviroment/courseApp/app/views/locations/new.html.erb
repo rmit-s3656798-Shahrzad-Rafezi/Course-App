@@ -8,7 +8,7 @@
     </div>
     <div class="row login-form">
       <div class="col-md-4 offset-md-4">
-        <%= form_for(@locations, url: location_path) do |f| %>
+        <%= form_for(@locations) do |f| %>
           <%= render 'shared/locations_error_messages' %>
           <div class="form-group">
             <%= f.text_field :name, class: 'form-control', placeholder: 'Location' %>

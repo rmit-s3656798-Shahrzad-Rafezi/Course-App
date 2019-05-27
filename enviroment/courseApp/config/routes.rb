@@ -7,10 +7,10 @@ Rails.application.routes.draw do
   post '/addCourses',  to: 'courses#create'
 
   get '/addCategory', to: 'categories#new'
-  post '/addCcategory',  to: 'categories#create'
+  post '/addCategory',  to: 'categories#create'
 
-  get '/location', to: 'locations#new'
-  post '/location',  to: 'locations#create'
+  get '/addLocations', to: 'locations#new'
+  post '/addLocations',  to: 'locations#create'
 
   resources :categories do
     member do
