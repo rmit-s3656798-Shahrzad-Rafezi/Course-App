@@ -32,6 +32,9 @@ Rails.application.routes.draw do
     end
   end 
 
+  get 'contact-me', to: 'messages#new', as: 'new_message'
+  post 'contact-me', to: 'messages#create', as: 'create_message'
+
   # resources :courses do
   #   member do
   #     get :categories
