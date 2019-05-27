@@ -1,5 +1,4 @@
 <% provide(:title, "Log in") %>
-
 <section class="showcase">
 <div class="container-fluid p-0">
     <div class="row no-gutters">
@@ -7,24 +6,6 @@
             <h1 class="main-heading">Login to your courseApp Account</h1>
         </div>
     </div>
-    <div class="row login-form">
-      <div class="col-md-4 offset-md-4">
-        <%= form_for(:session, url: login_path) do |f| %>
-
-        <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
-
-        <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
-
-        <%= f.label :remember_me, class: "checkbox inline" do %>
-          <%= f.check_box :remember_me %>
-          <span>Remember me</span>
-        <% end %>
-
-        <%= f.submit "Log in", class: "btn btn-light btn-block submit-button" %>
-        <% end %>
-
-        <p>New user? <%= link_to "Sign up now!", signup_path %></p>
-      </div>
-    </div>
+    <%= render 'form' %>
 </div>
 </section>
