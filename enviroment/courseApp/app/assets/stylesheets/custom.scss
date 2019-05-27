@@ -430,3 +430,15 @@ input, textarea, select, .uneditable-input {
 .showcase-img-2{
   	background-image: url("bg-showcase-1.jpg");
 }
+
+/* Users index */
+
+.category {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid;
+  }
+}
