@@ -34,8 +34,8 @@
                 <div class="text-muted card-subtitle mb-2"><%= link_to 'Like', upvote_vote_path(course.id), method: :post %></div>
                 <div class="text-muted card-subtitle mb-2"><%= link_to 'Dislike', downvote_vote_path(course.id), method: :post %></div>
             <% else %>
-                <div><%= pluralize(course.votes.count, "+ vote") %></div>
-                <div><%= pluralize(course.votes.count, "- vote") %></div>
+                <div><%= pluralize(course.votes.upvote.count, "+ vote") %></div>
+                <div><%= pluralize(course.votes.downvote.count, "- vote") %></div>
             <% end %>
         </div>
       </div>
