@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  get '/404', to: 'errors#not_found'
-  get '/500', to: 'errors#internal_server_error'
+  get '/404', to: 'errors#not_found', as:'not_found'
+  get '/500', to: 'errors#internal_server_error', as: 'server_error'
 
   get  '/addCourses',  to: 'courses#new'
   post '/addCourses',  to: 'courses#create'
@@ -26,11 +26,6 @@ Rails.application.routes.draw do
 
   resources :courses
 
-  resources :users do
-    member do
-      get :all_courses
-    end
-  end 
 
   # resources :courses do
   #   member do
@@ -52,8 +47,6 @@ Rails.application.routes.draw do
   #   end
   # end
 
-  get 'users/new'
-  
   root 'static_pages#home'
   get  '/contact', to: 'static_pages#contact'
 
