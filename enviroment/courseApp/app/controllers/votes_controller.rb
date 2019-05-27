@@ -2,12 +2,16 @@ class VotesController < ApplicationController
 
   def upvote
     @courses = Course.find(params[:id])
-    @courses.votes.create(user_id: current_user)
+    @courses.votes.create
     flash[:success] = "Thanks for your vote"
     redirect_to(courses_path)
   end
 
   def downvote
+    @courses = Course.find(params[:id])
+    @courses.votes.create
+    flash[:success] = "Thanks for your vote"
+    redirect_to(courses_path)
   end
   
   private
