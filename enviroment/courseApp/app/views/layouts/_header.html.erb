@@ -1,56 +1,58 @@
 <nav class="navbar navbar-light navbar-expand-md navbar-fixed-top navigation-clean-button">
-    
+
   <div class="container">
     <span><%= link_to "courseApp", root_path, class:"navbar-brand"%></span>
     <button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler">
       <span class="sr-only">Toggle navigation</span>
-      <span class="navbar-toggler-icon"></span>
-    </button>        
-    
+    </button>
     <div class="collapse navbar-collapse" id="navcol-1">
-            <ul class="nav navbar-nav nav-right">
-                <li class="nav-item dropdown" style="color: rgb(255,255,255);">
-                  <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">
-                    Category
-                  </a>
-                    <div role="menu" class="dropdown-menu">
-                      <%= link_to "Web Programming", "#", class:"dropdown-item"%>
-                      <%= link_to "Java", "#", class:"dropdown-item"%>
-                      <%= link_to "Full Stack Dev", "#", class:"dropdown-item"%>
-                      <%= link_to "iOS Engineering", "#", class:"dropdown-item"%>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">
-                  Location 
-                </a>
-                    <div role="menu" class="dropdown-menu">
-                      <%= link_to "14.10.31", "#", class:"dropdown-item"%>
-                      <%= link_to "14.08.26", "#", class:"dropdown-item"%>
-                      <%= link_to "14.10.30", "#", class:"dropdown-item"%>
-                    </div>
-                </li>
-            </ul>
+      <ul class="nav navbar-nav nav-right">
+      </ul>
+      <div class="collapse navbar-collapse" id="navcol-1">
+        <ul class="nav navbar-nav nav-right">
+          <li class="nav-item dropdown" style="color: rgb(255,255,255);">
+            <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">Category</a>
+              <div role="menu" class="dropdown-menu">
+                <% @category.each do |category| %>
+                  <%= link_to category.name, all_courses_category_path(id: category.id), class:"dropdown-item"%>
+                <% end %>
+                <% if logged_in? %>
+                  <%= link_to "Create Category", category_path, class:"dropdown-item", style: "background-color: rgb(179, 0, 0)"%>
+                <% end %>
+              </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">Location </a>
+            <div role="menu" class="dropdown-menu">
+              <% @location.each do |location| %>
+                <%= link_to location.name, all_courses_location_path(id: location.id), class:"dropdown-item"%>
+              <% end %>
+              <% if logged_in? %>
+                <%= link_to "Add Location", location_path, class:"dropdown-item", style: "background-color: rgb(179, 0, 0)"%>
+              <% end %>
+            </div>
+          </li>
+        </ul>
 
-            <% if logged_in? %>
-            <ul class="nav navbar-nav nav-left">
-              <li class="nav-item dropdown" style="color: rgb(255,255,255);">
-                <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">
-                  Account
-                </a>
-                  <div role="menu" class="dropdown-menu">
-                    <%= link_to "Profile", current_user, class:"dropdown-item"%>
-                    <%= link_to "Settings", edit_user_path(current_user), class:"dropdown-item"%>
-                    <%= link_to "Log out", logout_path, method: :delete, class:"dropdown-item"%>
-                  </div>
-              </li>
-            <% else %>
-                <p class="ml-auto navbar-text actions">
-                  <%= link_to "Login", login_path, class:"login"%>
-                  <%= link_to "Sign Up", signup_path, class:"btn btn-light action-button", role: "button"%>
-                </p>
-            <% end %>
-          </ul>
+    <% if logged_in? %>
+      <ul class="nav navbar-nav nav-left">
+      <p class="ml-auto navbar-text actions"><%= link_to "Add Course", addCourses_path%></p>
+        <li class="nav-item dropdown" style="color: rgb(255,255,255);">
+          <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">Account</a>
+          <div role="menu" class="dropdown-menu">
+            <%= link_to "Profile", current_user, class:"dropdown-item"%>
+            <%= link_to "Settings", edit_user_path(current_user), class:"dropdown-item"%>
+            <%= link_to "Log out", logout_path, method: :delete, class:"dropdown-item"%>
+          </div>
+        </li>
+    <% else %>
+      <p class="ml-auto navbar-text actions">
+        <%= link_to "Login", login_path, class:"login"%>
+        <%= link_to "Sign Up", signup_path, class:"btn btn-light action-button", role: "button"%>
+      </p>
+    <% end %>
+    </ul>
+      </div>
     </div>
   </div>
 </nav>
