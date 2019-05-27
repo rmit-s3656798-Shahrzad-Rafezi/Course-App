@@ -1,5 +1,4 @@
 <nav class="navbar navbar-light navbar-expand-md navbar-fixed-top navigation-clean-button">
-
   <div class="container">
     <span><%= link_to "courseApp", root_path, class:"navbar-brand"%></span>
     <button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler">
@@ -33,7 +32,6 @@
             </div>
           </li>
         </ul>
-
     <% if logged_in? %>
     <p class="ml-auto navbar-text actions"><%= link_to "Add Course", addCourses_path, class:"btn btn-light action-button"%></p>
       <ul class="nav navbar-nav nav-left">
