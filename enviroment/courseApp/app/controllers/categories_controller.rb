@@ -8,8 +8,25 @@ class CategoriesController < ApplicationController
     @categories = Category.new
   end
 
-  def create
-    @categories = Category.new(course_params)
-      render 'new'
+  def all_courses
+    @categories = Category.find(params[:id])
+    @courses = @categories.courses.all
   end
+
+  def create
+    @categories = Category.new(category_params)
+    if @categories.save
+      flash[:success] = "You have added a category!"
+      redirect_to @categories
+    else
+      render 'new'
+    end
+  end
+
+  private
+
+  def category_params
+    params.require(:category).permit(:name)
+  end
+
 end
