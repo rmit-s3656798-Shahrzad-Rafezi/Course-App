@@ -16,11 +16,13 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "POST create" do
-    post create_message_url, params: {
-      message: {
-        body: 'hai'
+    assert_difference 'ActionMailer::Base.deliveries.size', 1 do
+      post create_message_url, params: {
+        message: {
+          body: 'hai'
+        }
       }
-    }
+    end
 
     assert_redirected_to new_message_url
 
@@ -33,7 +35,7 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
     post create_message_url, params: {
       message: { name: '', email: '', body: '' }
     }
-    
+
     assert_match /Body .* blank/, response.body
   end
 

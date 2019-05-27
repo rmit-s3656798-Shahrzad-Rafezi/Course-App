@@ -5,13 +5,14 @@ class MessagesController < ApplicationController
     end
 
     def create
-        @message = Message.new message_params
+        @message = Message.new(message_params)
         if @message.valid?
-          redirect_to new_message_url, notice: "Message received, thanks!"
+          MessageMailer.contact_me(@message).deliver_now
+          redirect_to messages_new_url, notice: "Message received"
         else
           render :new
         end
-    end
+      end
 
     private 
 
