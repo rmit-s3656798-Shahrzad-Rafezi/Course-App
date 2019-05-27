@@ -1,0 +1,16 @@
+<% provide(:title, 'All Categories') %>
+<h1>All Categories</h1>
+
+<ul class="category">
+  <% @categories.each do |category| %>
+    <li>
+      <%= category.name %>
+      <% if current_user.try(:superuser?) && !current_user?(@user) %>
+        | <%= link_to "Delete", category, method: :delete, data: { confirm: "You sure?" }%>
+        | <%= link_to "Edit", edit_category_path(category.id)%>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+
+

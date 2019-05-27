@@ -9,6 +9,10 @@
             <div class="detail-images"><%= gravatar_for @user %></div>
             <h3><%= @user.name %></h3>
             <h4>courseApp Coordinator</h4>
+              <% if current_user.try(:superuser?)%>
+                <a><%= link_to "View Courses and Users", courses_path, id: "link" %></a>
+              <% end %>
+            <a class="mail" href="mailto:<%= @user.email %>">Send email</a>
             </div>
           </div>
         </div> 
