@@ -1,5 +1,4 @@
 <nav class="navbar navbar-light navbar-expand-md navbar-fixed-top navigation-clean-button">
-
   <div class="container">
     <% if logged_in? %>
       <span><%= link_to "courseApp", courses_path, class:"navbar-brand"%></span>
@@ -37,7 +36,6 @@
             </div>
           </li>
         </ul>
-
     <% if logged_in? %>
     <p class="ml-auto navbar-text actions"><%= link_to "Add Course", addCourses_path, class:"btn btn-light action-button"%></p>
       <ul class="nav navbar-nav nav-left">
