@@ -43,6 +43,10 @@
                     <h6 class="text-muted card-subtitle mb-2">Created: <br> <%= course.created_at.strftime("%d/%m/%Y") %></h6>
                       <a class="card-link" href="#">Like</a>
                     <a class="card-link" href="#">Dislike</a>
+                  <% if current_user.try(:superuser?) && !current_user?(@user) %>
+                    <a class="card-link" ><%= link_to "Edit", edit_course_path(course.id) %></a>
+                    <a class="card-link" ><%= link_to "Delete", course, method: :delete, data: { confirm: "You sure?" } %></a>
+                  <%end %>
                 </div>
               </div>
             </div>
@@ -58,6 +62,10 @@
             <% @user.each do |user| %>
                 <p class="profile-img-card" style="margin-bottom: 0px;"><%= gravatar_for user %></p>
                 <p class="profile-name-card"><%= user.name %></p>
+              <% if current_user.try(:superuser?) && !current_user?(user) %>
+                <%= link_to "Delete", user, method: :delete, data: { confirm: "You sure?" } %>
+                <%= link_to "Edit", edit_user_path(user)%>
+              <% end %>
             <% end %>
           </div>
         </div>
