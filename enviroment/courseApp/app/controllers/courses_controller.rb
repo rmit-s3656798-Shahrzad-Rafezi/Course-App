@@ -2,7 +2,7 @@ class CoursesController < ApplicationController
 
   before_action :logged_in_user, only: [:edit, :update]
   before_action :correct_user,   only: [:edit, :update]
-  before_action :super_user,     only: [:index, :edit, :update, :destroy]
+
 
   def show
     @courses = Course.find(params[:id])
@@ -68,7 +68,8 @@ class CoursesController < ApplicationController
 
   def correct_user
     @courses = Course.find(params[:id])
-    redirect_to(root_url) unless current_user.id == @courses.user_id
+    redirect_to(root_url) unless current_user.id == @courses.user_id or current_user.superuser?
   end
 
 end
+
