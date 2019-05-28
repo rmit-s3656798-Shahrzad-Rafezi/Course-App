@@ -1,7 +1,10 @@
 <nav class="navbar navbar-light navbar-expand-md navbar-fixed-top navigation-clean-button">
-
   <div class="container">
-    <span><%= link_to "courseApp", root_path, class:"navbar-brand"%></span>
+    <% if logged_in? %>
+      <span><%= link_to "courseApp", courses_path, class:"navbar-brand"%></span>
+    <% else %>
+      <span><%= link_to "courseApp", root_path, class:"navbar-brand"%></span>
+    <% end %>
     <button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler">
       <span class="sr-only">Toggle navigation</span>
     </button>
@@ -17,7 +20,10 @@
                   <%= link_to category.name, all_courses_category_path(id: category.id), class:"dropdown-item"%>
                 <% end %>
                 <% if logged_in? %>
-                <%= link_to "Add Category", category_path, class:"dropdown-item", style: "border-top: solid" %>
+                  <%= link_to "Create Category", addCategory_path, class:"dropdown-item", style: "border-top: solid"%>
+                  <% if current_user.try(:superuser?) && !current_user?(@user) %>
+                    <%= link_to "View Categories", categories_path, class:"dropdown-item", style: "border-top: solid" %>
+                  <% end %>
                 <% end %>
               </div>
           </li>
@@ -28,12 +34,14 @@
                 <%= link_to location.name, all_courses_location_path(id: location.id), class:"dropdown-item"%>
               <% end %>
               <% if logged_in? %>
-                <%= link_to "Add Location", location_path, class:"dropdown-item", style: "border-top: solid" %>
+                <%= link_to "Add Location", addLocations_path, class:"dropdown-item", style: "border-top: solid" %>
+                <% if current_user.try(:superuser?) && !current_user?(@user) %>
+                  <%= link_to "View Locations", locations_path, class:"dropdown-item", style: "border-top: solid" %>
+                <% end %>
               <% end %>
             </div>
           </li>
         </ul>
-
     <% if logged_in? %>
     <p class="ml-auto navbar-text actions"><%= link_to "Add Course", addCourses_path, class:"btn btn-light action-button"%></p>
       <ul class="nav navbar-nav nav-left">

@@ -1,4 +1,5 @@
 <% provide(:title, "Add Course") %>
+<% provide(:button_text, "Add Course") %>
 <section class="showcase">
   <div class="container-fluid p-0">
     <div class="row no-gutters">
@@ -8,7 +9,48 @@
     </div>
     <div class="row login-form">
       <div class="col-md-4 offset-md-4">
-        <%= render 'form' %>
+      <%= form_for(@courses, url: addCourses_path) do |f| %>
+        <%= render 'shared/courses_error_messages' %>
+        <%= hidden_field_tag :user_id, value: current_user.id %>
+    
+        <div class="form-group">
+          <%= f.text_field :name, class: 'form-control', placeholder: 'Name' %>
+        </div>
+    
+        <div class="form-group">
+          <%= f.text_field :prerequisite, class: 'form-control', placeholder: 'Prerequisite' %>
+        </div>
+    
+        <div class="form-group">
+          <%= f.text_area(:description, class: 'form-control' ,size: '50x10', placeholder: 'Description') %>
+          <%#= f.text_field :description, class: 'form-control', placeholder: 'Description' %>
+        </div>
+    
+        <div class="container">
+          <div class="row">
+            
+          <div class="col-sm">
+            <label>Category</label>
+            <%= hidden_field_tag "course[category_ids][]", nil %>
+            <% Category.all.each do |category| %>
+              <%= check_box_tag "course[category_ids][]", category.id, f.object.categories.include?(category)%><%= category.name %>
+            <% end %>
+            </div>
+    
+            <div class="col-sm">
+            <label>Location</label>
+              <%= hidden_field_tag "course[location_ids][]", nil %>
+              <% Location.all.each do |location| %>
+                <%= check_box_tag "course[location_ids][]", location.id, f.object.locations.include?(location)%><%= location.name %>
+              <% end %>
+            </div>
+    
+          </div>
+        </div>
+        <br><%= f.file_field :image %>
+        <%= f.submit "Add course", class: "btn btn-light btn-block submit-button" %>
+    
+    <% end %>
       </div>
     </div>
   </div>

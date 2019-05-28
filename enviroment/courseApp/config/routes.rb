@@ -6,17 +6,17 @@ Rails.application.routes.draw do
   get  '/addCourses',  to: 'courses#new'
   post '/addCourses',  to: 'courses#create'
 
-  get '/category', to: 'categories#new'
-  post '/category',  to: 'categories#create'
+  get '/addCategory', to: 'categories#new'
+  post '/addCategory',  to: 'categories#create'
 
-  get '/location', to: 'locations#new'
-  post '/location',  to: 'locations#create'
+  get '/addLocations', to: 'locations#new'
+  post '/addLocations',  to: 'locations#create'
 
   resources :categories do
     member do
       get :all_courses
     end
-  end 
+  end
 
   resources :locations do
     member do
@@ -26,29 +26,23 @@ Rails.application.routes.draw do
 
   resources :courses
 
+  resources :votes do
+    member do
+      post 'upvote', to: 'votes#upvote'
+      post 'downvote', to: 'votes#downvote'
+    end
+  end
 
   get 'contact-me', to: 'messages#new', as: 'new_message'
   post 'contact-me', to: 'messages#create', as: 'create_message'
 
-  # resources :courses do
-  #   member do
-  #     get :categories
-  #     post :category_add
-  #     post :category_remove
-  #     get :locations
-  #     post :location_add
-  #     post :location_remove
-  #     get :users
-  #     post :user_add
-  #     post :user_remove
-  #   end
-  # end
+  root 'static_pages#home'
 
-  # resources :locations do
-  #   member do
-  #     get :all_courses
-  #   end
-  # end
+  resources :users do
+    member do
+      get :all_courses
+    end
+  end 
 
   root 'static_pages#home'
   get  '/signup',  to: 'users#new'
@@ -58,5 +52,6 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
 
   resources :users
+  resources :courses
 
 end
