@@ -1,5 +1,5 @@
 class VotesController < ApplicationController
-
+    
   def upvote
     @course = Course.find(params[:id])
     @course.votes.create(user_id: current_user.id)
