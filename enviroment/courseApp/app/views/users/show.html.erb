@@ -12,7 +12,6 @@
               <% if current_user.try(:superuser?)%>
                 <a><%= link_to "View Courses and Users", courses_path, id: "link" %></a>
               <% end %>
-            <a class="mail" href="mailto:<%= @user.email %>">Send email</a>
             </div>
           </div>
         </div> 
