@@ -1,0 +1,20 @@
+<% provide(:title, 'Update user') %>
+<% provide(:button_text, 'Update') %>
+<section class="showcase">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+      <div class="col" style="padding: 20px;margin: 20px;">
+        <h1 class="main-heading">Update Your profile</h1>
+      </div>
+    </div>
+    <div class="row login-form">
+      <div class="col-md-4 offset-md-4">
+        <%= render 'form' %>
+        <div class="gravatar_edit">
+        <%= gravatar_for @user %>
+        <a href="http://gravatar.com/emails" target="_blank">Change</a>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>

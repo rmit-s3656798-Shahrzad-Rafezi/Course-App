@@ -1,0 +1,16 @@
+class RevertBackSome < ActiveRecord::Migration[5.2]
+  def change
+    create_table "courses", force: :cascade do |t|
+      t.bigint "user_id"
+      t.bigint "votes_id"
+      t.string "name"
+      t.string "prerequisite"
+      t.string "description"
+      t.string "image"
+      t.datetime "created_at", null: false
+      t.datetime "updated_at", null: false
+      t.index ["user_id"], name: "index_courses_on_user_id"
+    end
+    add_foreign_key "courses", "users"
+  end
+end

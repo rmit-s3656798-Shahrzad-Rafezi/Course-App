@@ -1,0 +1,14 @@
+<% provide(:title, 'All Locations') %>
+<h1>All Categories</h1>
+
+<ul class="locations">
+  <% @locations.each do |location| %>
+    <li>
+      <%= location.name %>
+      <% if current_user.try(:superuser?) && !current_user?(@user) %>
+        | <%= link_to "Delete", location, method: :delete, data: { confirm: "You sure?" }%>
+        | <%= link_to "Edit", edit_location_path(location.id)%>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

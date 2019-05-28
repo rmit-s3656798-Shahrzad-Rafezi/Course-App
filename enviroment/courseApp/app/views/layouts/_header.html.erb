@@ -1,0 +1,66 @@
+<nav class="navbar navbar-light navbar-expand-md navbar-fixed-top navigation-clean-button">
+  <div class="container">
+    <% if logged_in? %>
+      <span><%= link_to "courseApp", courses_path, class:"navbar-brand"%></span>
+    <% else %>
+      <span><%= link_to "courseApp", root_path, class:"navbar-brand"%></span>
+    <% end %>
+    <button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler">
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+    <div class="collapse navbar-collapse" id="navcol-1">
+      <ul class="nav navbar-nav nav-right">
+      </ul>
+      <div class="collapse navbar-collapse" id="navcol-1">
+        <ul class="nav navbar-nav nav-right">
+          <li class="nav-item dropdown" style="color: rgb(255,255,255);">
+            <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">Category</a>
+              <div role="menu" class="dropdown-menu">
+                <% @category.each do |category| %>
+                  <%= link_to category.name, all_courses_category_path(id: category.id), class:"dropdown-item"%>
+                <% end %>
+                <% if logged_in? %>
+                  <%= link_to "Create Category", addCategory_path, class:"dropdown-item", style: "border-top: solid"%>
+                  <% if current_user.try(:superuser?) && !current_user?(@user) %>
+                    <%= link_to "View Categories", categories_path, class:"dropdown-item", style: "border-top: solid" %>
+                  <% end %>
+                <% end %>
+              </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">Location </a>
+            <div role="menu" class="dropdown-menu">
+              <% @location.each do |location| %>
+                <%= link_to location.name, all_courses_location_path(id: location.id), class:"dropdown-item"%>
+              <% end %>
+              <% if logged_in? %>
+                <%= link_to "Add Location", addLocations_path, class:"dropdown-item", style: "border-top: solid" %>
+                <% if current_user.try(:superuser?) && !current_user?(@user) %>
+                  <%= link_to "View Locations", locations_path, class:"dropdown-item", style: "border-top: solid" %>
+                <% end %>
+              <% end %>
+            </div>
+          </li>
+        </ul>
+    <% if logged_in? %>
+    <p class="ml-auto navbar-text actions"><%= link_to "Add Course", addCourses_path, class:"btn btn-light action-button"%></p>
+      <ul class="nav navbar-nav nav-left">
+        <li class="nav-item dropdown" style="color: rgb(255,255,255);">
+          <a data-toggle="dropdown" aria-expanded="false" href="#" class="dropdown-toggle nav-link">Account</a>
+          <div role="menu" class="dropdown-menu">
+            <%= link_to "Profile", current_user, class:"dropdown-item"%>
+            <%= link_to "Settings", edit_user_path(current_user), class:"dropdown-item"%>
+            <%= link_to "Log out", logout_path, method: :delete, class:"dropdown-item", style: "border-top: solid" %>
+          </div>
+        </li>
+      </ul>
+    <% else %>
+      <p class="ml-auto navbar-text actions">
+        <%= link_to "Login", login_path, class:"login"%>
+        <%= link_to "Sign Up", signup_path, class:"btn btn-light action-button", role: "button"%>
+      </p>
+    <% end %>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,41 @@
+<% provide(:title, @user.name) %>
+<section class="showcase">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+      <div class="col" style="padding: 20px;margin: 20px;">
+        <h1 class="main-heading">Your Profile</h1>
+          <div class="card">
+            <div class="detail">
+            <div class="detail-images"><%= gravatar_for @user %></div>
+            <h3><%= @user.name %></h3>
+            <h4>courseApp Coordinator</h4>
+              <% if current_user.try(:superuser?)%>
+                <a><%= link_to "View Courses and Users", courses_path, id: "link" %></a>
+              <% end %>
+            </div>
+          </div>
+        </div> 
+    </div>
+  </div>
+</section>
+<div class="row">
+  <% @courses.each do |course| %>
+    <%if course.user_id == @user.id %>
+    <div class="col-lg-4">
+      <div class="card mb-4 box-shadow">
+        <div class="card-body">
+            <h4 class="card-title"><%= course.name %></h4>
+            <h6 class="text-muted card-subtitle mb-2">Coordinator: <br> <%= course.user.try(:name) %></h6>
+            <br>
+            <h6 class="text-muted card-subtitle mb-2">Prerequisite: <br> <%= course.prerequisite %></h6>
+            <br>
+            <h6 class="text-muted card-subtitle mb-2">Created: <br> <%= course.created_at.strftime("%d/%m/%Y") %></h6>
+            <div><%= pluralize(course.votes.count, "+ vote") %></div>
+            <div><%= pluralize(course.votes.count, "- vote") %></div>
+            <a class="card-link" href="#"><%= link_to "Edit", edit_course_path(course.id) %></a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+</div>
