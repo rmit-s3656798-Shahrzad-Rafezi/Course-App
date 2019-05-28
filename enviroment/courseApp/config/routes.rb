@@ -28,8 +28,8 @@ Rails.application.routes.draw do
 
   resources :votes do
     member do
-      post 'upvote'
-      post 'downvote'
+      post 'upvote', to: 'votes#upvote'
+      post 'downvote', to: 'votes#downvote'
     end
   end
 
