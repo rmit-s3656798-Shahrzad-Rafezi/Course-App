@@ -22,7 +22,22 @@ Rails.application.routes.draw do
     member do
       get :all_courses
     end
+  end 
+
+  resources :courses
+
+  resources :votes do
+    member do
+      post 'upvote', to: 'votes#upvote'
+      post 'downvote', to: 'votes#downvote'
+    end
   end
+
+  resources :users do
+    member do
+      get :all_courses
+    end
+  end 
 
   root 'static_pages#home'
   get  '/contact', to: 'static_pages#contact'

@@ -12,7 +12,6 @@
               <% if current_user.try(:superuser?)%>
                 <a><%= link_to "View Courses and Users", courses_path, id: "link" %></a>
               <% end %>
-            <a class="mail" href="mailto:<%= @user.email %>">Send email</a>
             </div>
           </div>
         </div> 
@@ -31,8 +30,8 @@
             <h6 class="text-muted card-subtitle mb-2">Prerequisite: <br> <%= course.prerequisite %></h6>
             <br>
             <h6 class="text-muted card-subtitle mb-2">Created: <br> <%= course.created_at.strftime("%d/%m/%Y") %></h6>
-            <a class="card-link" href="#">Like</a>
-            <a class="card-link" href="#">Dislike</a>
+            <div><%= pluralize(course.votes.count, "+ vote") %></div>
+            <div><%= pluralize(course.votes.count, "- vote") %></div>
             <a class="card-link" href="#"><%= link_to "Edit", edit_course_path(course.id) %></a>
         </div>
       </div>
