@@ -22,7 +22,7 @@ class CoursesController < ApplicationController
 
     if @courses.save
       flash[:success] = "You have added a course!"
-      redirect_to @courses
+      redirect_to courses_path
     else
       render 'new'
     end
