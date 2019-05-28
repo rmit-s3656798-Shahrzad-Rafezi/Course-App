@@ -4,9 +4,6 @@ class StaticPagesController < ApplicationController
     @location = Location.all
   end
 
-  def contact
-  end
-
   def courses
     @courses = Course.all
   end

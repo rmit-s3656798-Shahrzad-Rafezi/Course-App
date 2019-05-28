@@ -33,6 +33,11 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'contact-me', to: 'messages#new', as: 'new_message'
+  post 'contact-me', to: 'messages#create', as: 'create_message'
+
+  root 'static_pages#home'
+
   resources :users do
     member do
       get :all_courses
@@ -40,7 +45,6 @@ Rails.application.routes.draw do
   end 
 
   root 'static_pages#home'
-  get  '/contact', to: 'static_pages#contact'
   get  '/signup',  to: 'users#new'
   post '/signup',  to: 'users#create'
   get    '/login',   to: 'sessions#new'
