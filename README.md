@@ -8,6 +8,7 @@ This repository includes all the required operation for building a course manage
 4. Highest level: HD 80+
 5. Please check the commit history for all the contributions.
 6. [Our Trello Board](https://trello.com/b/e49u3T6y)
+7. [Deployed Link](https://rad-deployment.herokuapp.com/)
 
 # Coding Convention
 1. Follow the naming convention camelCase. E.g. radAssignment
