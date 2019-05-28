@@ -15,6 +15,13 @@ class VotesController < ApplicationController
     flash[:success] = "Thanks for your vote"
     redirect_to(courses_path)
   end
+
+  def destroy
+    @course = Course.find(params[:id])
+    @course.votes.destory_all
+    flash[:success] = "Votes Resetted"
+    redirect_to(courses_path)
+  end
   
   private
 
