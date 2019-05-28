@@ -36,8 +36,8 @@
                 <div><%= pluralize(course.votes.count, "+ vote") %></div>
                 <div><%= pluralize(course.votes.count, "- vote") %></div>
             <% else %>
-                <div><%= pluralize(course.votes.upvote.count, "+ vote") %></div>
-                <div><%= pluralize(course.votes.downvote.count, "- vote") %></div>
+                <div><%= pluralize(course.votes.count, "+ vote") %></div>
+                <div><%= pluralize(course.votes.count, "- vote") %></div>
             <% end %>
         </div>
       </div>
