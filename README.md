@@ -2,7 +2,7 @@
 This repository includes all the required operation for building a course management website to help staff organize existing courses and propose new courses.
 
 # Getting Started
-1. Clone the project ```git clone https://yourusername@bitbucket.org/yourusername/rad-assignment.git```
+1. Clone the project ```git clone https://yourusername@bitbucket.org/shazfaraji/rad-assignment.git```
 2. Admin credintials: username: superuser.courseapp@rmit.edu.au and password: Password1!
 3. Shahryar Faraji s3657505, Shahrzad Rafezi s3656798
 4. Highest level: HD 80+
